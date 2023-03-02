@@ -3,7 +3,8 @@
 use App\Http\Controllers\API\PublisherController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\StoryController;
-use App\Http\Controllers\API\SubmissionController;
+use App\Http\Controllers\API\SubmissionController; 
+ 
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\API\SubmissionController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();

@@ -25,17 +25,28 @@ $(document).ready(function () {
     width: "resolve",
   });
 
-  $(".single-select-storyEdit").select2({
+  $(".single-storyEdit").select2({
     maximumSelectionLength: 1,
     dropdownParent: $("#exampleModal"),
     width: "resolve",
   });
+
+  $(".single-select-storyNew").select2({
+    maximumSelectionLength: 1,
+    dropdownParent: $("#storyModal"),
+    width: "resolve",
+  });
+
   $(".single-select").select2({
     maximumSelectionLength: 1,
     dropdownParent: $("#editPublisherModal"),
     width: "resolve",
   });
-
+  $(".single-select-publishernew").select2({
+    maximumSelectionLength: 1,
+    dropdownParent: $("#PublisherModal"),
+    width: "resolve",
+  });
   //setting modal sortable section
   $("#sortable").sortable();
 

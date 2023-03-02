@@ -51,10 +51,30 @@
                 @if (Auth::check())
                     <div class="d-flex">
 
-                        <button type="button" class="book-a-table-btn btn d-lg-flex h-100 me-4" data-bs-toggle="modal"
-                            data-bs-target="#submission">
-                            <i class="fa fa-plus me-2 mt-1"></i>Add New
-                        </button>
+
+                        @if (request()->segment(count(request()->segments())) == 'submissions')
+                            <button type="button" class="book-a-table-btn btn d-lg-flex h-100 me-4"
+                                data-bs-toggle="modal" data-bs-target="#submission">
+                                <i class="fa fa-plus me-2 mt-1"></i>Add New
+                            </button>
+                        @endif
+                        @if (request()->segment(count(request()->segments())) == 'stories')
+                            <button type="button" class="book-a-table-btn btn d-lg-flex h-100 me-4"
+                                data-bs-toggle="modal" data-bs-target="#storyModal">
+                                <i class="fa fa-plus me-2 mt-1"></i>Add New
+                            </button>
+                        @endif
+
+                        @if (request()->segment(count(request()->segments())) == 'publishers')
+                            <button type="button" class="book-a-table-btn btn d-lg-flex h-100 me-4"
+                                data-bs-toggle="modal" data-bs-target="#PublisherModal">
+                                <i class="fa fa-plus me-2 mt-1"></i>Add New
+                            </button>
+                        @endif
+
+
+
+
                         <i class="fa fa-cog fs-3  mt-1 me-4 " data-bs-toggle="modal" data-bs-target="#setting"
                             style="cursor: pointer"></i>
                         <i class="fa fa-question-circle fs-3  mt-1  me-4" style="cursor: pointer"></i>
@@ -122,6 +142,8 @@
     @include('modal.editStory')
     @include('modal.editPublisher')
     @include('modal.editSubmission')
+    @include('modal.Story')
+    @include('modal.Publisher')
 </body>
 
 <!-- Vendor JS Files -->
