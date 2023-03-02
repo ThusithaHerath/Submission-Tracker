@@ -2,3 +2,32 @@
   background-color: rgba(0, 0, 0, 0.897) !important;
 }
 
+ 
+ 
+/* The Width Of Global scrollbar */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* The scrollbar track (path of scrollbar) */
+
+::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
+  box-shadow: 0 0 10px #ddd inset;
+}
+
+/*
+    Note The Div inhertance box-shadow property From Global scrollbar-track (cause we not give its property as a special property To div scrollbar)
+*/
+
+/* The scrollbar thumb ( Moving Part Of scroll) */
+
+::-webkit-scrollbar-thumb {
+  background-color: #d3af71;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f0b857;
+}

@@ -28,6 +28,7 @@
 </head>
 
 <body>
+
     <div id="app" class="p-3">
 
 
@@ -49,8 +50,9 @@
                         data-bs-toggle="modal" data-bs-target="#submission">
                         <i class="fa fa-plus me-2 mt-1"></i>Add New
                     </button>
-                    <i class="fa fa-cog fs-3  mt-1 me-4 "></i>
-                    <i class="fa fa-question-circle fs-3  mt-1  me-4"></i>
+                    <i class="fa fa-cog fs-3  mt-1 me-4 " data-bs-toggle="modal" data-bs-target="#setting"
+                        style="cursor: pointer"></i>
+                    <i class="fa fa-question-circle fs-3  mt-1  me-4" style="cursor: pointer"></i>
                 </div>
 
             </div>
@@ -95,6 +97,7 @@
     </div>
 
     @include('modal.submission')
+    @include('modal.setting')
 </body>
 
 <!-- Vendor JS Files -->
@@ -114,6 +117,6 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 @stack('scripts')
 <script src="{{ asset('js/common.js') }}"></script>
-
+<script src="{{ asset('js/table.js') }}"></script>
 
 </html>

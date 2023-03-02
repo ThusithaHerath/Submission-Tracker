@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="submission" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content modalBody">
             <div class="modal-header border-0">
                 <h5 class="modal-title" id="exampleModalLabel">
@@ -84,7 +84,7 @@
 
                                                         <div class="form-group p-0">
                                                             <label for="" class="form-label"
-                                                                style="font-size:13.9px">Simultsneous
+                                                                style="font-size:13.7px">Simultsneous
                                                                 Submission OK?</label>
                                                             <select class="single-select" multiple
                                                                 style="width:150px!important;">
