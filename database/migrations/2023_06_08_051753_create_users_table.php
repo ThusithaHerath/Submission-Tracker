@@ -29,7 +29,10 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('license_id')->index()->unsigned()->nullable();
+            $table->unsignedBigInteger('license_id')->nullable();
+            $table->foreign('license_id')->references('id')->on('license_types');
+            $table->unsignedBigInteger('setting_id')->nullable();
+            $table->foreign('setting_id')->references('id')->on('user__settings');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\license_type;
+use App\Models\User_Setting;
 
 class User extends Authenticatable
 {
@@ -32,13 +33,16 @@ class User extends Authenticatable
         'date_last_login',
         'email',
         'password',
-        'LicenseType_ID'
+        'license_id',
+        'setting_id'
     ];
 
-    public function license(){
-
+    public function licenseType(){
         return $this->belongsTo(license_type::class,'license_id');
+    }
 
+    public function settingValue(){
+        return $this->belongsTo(User_Setting::class,'setting_id');
     }
 
     /**

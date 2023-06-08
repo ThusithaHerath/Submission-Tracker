@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('license_types', function (Blueprint $table) {
             $table->id();
-            $table->string('LicenseType_ID')->unique();
             $table->string('LicenseType_Name');
             $table->string('DaysDuration');
             $table->string('DaysAfterExpirationToDeleteUser');
