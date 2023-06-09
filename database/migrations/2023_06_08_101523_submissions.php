@@ -15,8 +15,8 @@ return new class extends Migration {
         Schema::create('submissions', function (Blueprint $table) {
             $table->id();
             $table->string('SubmissionDate')->nullable();
-            $table->string('FeePaid')->nullable();
-            $table->string('PayReceived')->nullable();
+            $table->decimal('FeePaid')->nullable();
+            $table->decimal('PayReceived')->nullable();
             $table->string('Notes')->nullable();
             $table->json('Custom');
 
