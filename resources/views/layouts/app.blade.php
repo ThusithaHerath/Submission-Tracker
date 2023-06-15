@@ -10,64 +10,99 @@
 
     <title>Submission Tracker</title>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
+ 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+     <!-- Vendor CSS Files -->
+  <link href="{{ asset('ST_resource/vendor/animate.css/animate.min.css' )}}" rel="stylesheet">
+  <link href="{{ asset('ST_resource/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('ST_resource/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('ST_resource/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('ST_resource/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('ST_resource/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('ST_resource/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ asset('ST_resource/css/style.css' )}}" rel="stylesheet">
+
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="p-3">
+
+      
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+        <div class="d-flex">
+           <a href="{{ route('home') }}" class="logo  me-3 bg-white"><img src="{{ asset('ST_resource/img/logo.png') }}" alt=""
+                    class="img-fluid"></a>
+
+                    <a href="{{ route('home') }}" class="logo  me-3"><h1 class="logo me-auto me-lg-0 fw-bold fs-2 mt-1 text-white"> Submissions Tracker </h1></a>
+        </div>
+        <div class="d-flex">
+            <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex me-4"><i
+                    class="fa fa-plus me-2 mt-1"></i>Add New</a>
+            <i class="fa fa-cog fs-3  mt-1 me-4 "></i>
+            <i class="fa fa-question-circle fs-3  mt-1  me-4"></i>
+        </div>
+
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+        <div class="row">
+          
+            <main >
+                @yield('content')
+            </main>
+
+        </div>
+    </div>
+</section>
+<!-- End Hero -->
 
 
-        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light p-4" id="ftco-navbar"
-            style="background-color: #0a3f69b9!important;box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
-            <div class="container-fluid">
-                <div>
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <div class="copyright">
+            &copy; Kitty Consultants LLC
+        </div>
+        <div class="credits">
 
-                    <h1 class="navbar-brand fw-bolder fs-2 m-0 p-0 text-white"
-                        style="text-shadow: 1px -2px 4px rgba(0,0,0,0.6);">
-                        <img src="https://www.pikpng.com/pngl/b/583-5830237_your-logo-retulp-bus-stop-clipart.png"
-                            class="logo-navbar" alt="" srcset="">
-                        Submissions Tracker
-                    </h1>
-                    <p class="m-0 text-white" style="font-size: 10px"> © Kitty Consultants LLC</p>
-                </div>
-
-                <form action="#" class="searchform order-sm-start order-lg-last  m-0">
-                    <div class="form-group d-flex">
-                        <button class="noselect me-3"><i class="fa fa-plus me-2"></i>Add New</button>
-                        <i class="fa fa-cog fs-3 me-3 mt-1 icons"></i>
-                        <i class="fa fa-question-circle fs-3 me-3 mt-1 icons"></i>
-
-                    </div>
-                </form>
-
-                <div class="collapse navbar-collapse" id="ftco-nav">
-                    <ul class="navbar-nav m-auto">
-                        <li class="nav-item   me-3">
-
-                            <button class="noselect">Stories</button>
-
-                        </li>
-
-                        <li class="nav-item me-3"> <button class="noselect">Submissions</button>
-                        </li>
-                        <li class="nav-item me-3"> <button class="noselect">Publishers</button>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
+        </div>
+    </div>
 
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+       
     </div>
 </body>
 
+  <!-- Vendor JS Files -->
+  <script src="{{ asset('ST_resource/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('ST_resource/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('ST_resource/vendor/glightbox/js/glightbox.min.js' )}}"></script>
+  <script src="{{ asset('ST_resource/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ asset('ST_resource/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ asset('ST_resource/vendor/php-email-form/validate.js' )}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ asset('ST_resource/js/main.js') }}"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  @stack('scripts')
 </html>
