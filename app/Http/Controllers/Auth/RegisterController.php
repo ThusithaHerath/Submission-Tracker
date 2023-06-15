@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -76,7 +77,7 @@ class RegisterController extends Controller
             'zip' => $data['zip'],
             'lisense_date' => $data['ldate'],
             'permission' => $data['permission'],
-            // 'date_last_login' => $data['date_last_login'],
+            'date_last_login' => Carbon::now(),
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
