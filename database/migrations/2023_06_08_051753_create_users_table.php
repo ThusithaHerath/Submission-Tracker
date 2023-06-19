@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('fname');
             $table->string('lname');
-            $table->string('phone');
+            $table->string('phone',16);
             $table->string('address1');
             $table->string('address2');
             $table->string('city');
-            $table->string('state');
+            $table->char('state',2);
             $table->string('zip');
             $table->date('lisense_date');
             $table->string('permission');
@@ -31,8 +31,8 @@ return new class extends Migration
             $table->string('password');
             $table->unsignedBigInteger('license_id')->nullable();
             $table->foreign('license_id')->references('id')->on('license_types');
-            $table->unsignedBigInteger('setting_id')->nullable();
-            $table->foreign('setting_id')->references('id')->on('user__settings');
+            $table->unsignedBigInteger('setting')->nullable();
+            $table->foreign('setting')->references('id')->on('user__settings');
             $table->rememberToken();
             $table->timestamps();
         });

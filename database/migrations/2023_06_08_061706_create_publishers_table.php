@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('publishers', function (Blueprint $table) {
             $table->id();
             $table->string('Publisher URL');
-            $table->string('FeeForSubmission');
+            $table->decimal('FeeForSubmission');
             $table->string('HowToSubmit');
             $table->string('Rating');
-            $table->integer('SimultaneousSubmissionAllowed');
+            $table->boolean('SimultaneousSubmissionAllowed');
             $table->string('Contact');
             $table->date('Deadline DATE');
             $table->string('DeadlineInfo');
