@@ -10,99 +10,109 @@
 
     <title>Submission Tracker</title>
 
- 
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-     <!-- Vendor CSS Files -->
-  <link href="{{ asset('ST_resource/vendor/animate.css/animate.min.css' )}}" rel="stylesheet">
-  <link href="{{ asset('ST_resource/vendor/aos/aos.css') }}" rel="stylesheet">
-  <link href="{{ asset('ST_resource/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('ST_resource/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ asset('ST_resource/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('ST_resource/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('ST_resource/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('ST_resource/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('ST_resource/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('ST_resource/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('ST_resource/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('ST_resource/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('ST_resource/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('ST_resource/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="{{ asset('ST_resource/css/style.css' )}}" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="{{ asset('ST_resource/css/style.css') }}" rel="stylesheet">
 
 </head>
 
 <body>
     <div id="app" class="p-3">
 
-      
- <!-- ======= Header ======= -->
- <header id="header" class="fixed-top d-flex align-items-cente">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-        <div class="d-flex">
-           <a href="{{ route('home') }}" class="logo  me-3 bg-white"><img src="{{ asset('ST_resource/img/logo.png') }}" alt=""
-                    class="img-fluid"></a>
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top d-flex align-items-cente">
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-                    <a href="{{ route('home') }}" class="logo  me-3"><h1 class="logo me-auto me-lg-0 fw-bold fs-2 mt-1 text-white"> Submissions Tracker </h1></a>
-        </div>
-        <div class="d-flex">
-            <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex me-4"><i
-                    class="fa fa-plus me-2 mt-1"></i>Add New</a>
-            <i class="fa fa-cog fs-3  mt-1 me-4 "></i>
-            <i class="fa fa-question-circle fs-3  mt-1  me-4"></i>
-        </div>
+                <div class="d-flex">
+                    <a href="{{ route('home') }}" class="logo  me-3 bg-white"><img
+                            src="{{ asset('ST_resource/img/logo.png') }}" alt="" class="img-fluid"></a>
+
+                    <a href="{{ route('home') }}" class="logo  me-3">
+                        <h1 class="logo me-auto me-lg-0 fw-bold fs-2 mt-1 text-white"> Submissions Tracker </h1>
+                    </a>
+                </div>
+                <div class="d-flex">
+
+                    <button type="button" class="btn  book-a-table-btn scrollto d-none d-lg-flex me-4"
+                        data-bs-toggle="modal" data-bs-target="#submission">
+                        <i class="fa fa-plus me-2 mt-1"></i>Add New
+                    </button>
+                    <i class="fa fa-cog fs-3  mt-1 me-4 "></i>
+                    <i class="fa fa-question-circle fs-3  mt-1  me-4"></i>
+                </div>
+
+            </div>
+        </header><!-- End Header -->
+
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex align-items-center">
+            <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+                <div class="row">
+
+                    <main>
+                        @yield('content')
+                    </main>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Hero -->
+
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+            <div class="container">
+                <div class="copyright">
+                    &copy; Kitty Consultants LLC
+                </div>
+                <div class="credits">
+
+                    {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
+                </div>
+            </div>
+
+
+        </footer><!-- End Footer -->
+
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+
 
     </div>
-</header><!-- End Header -->
 
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
-        <div class="row">
-          
-            <main >
-                @yield('content')
-            </main>
-
-        </div>
-    </div>
-</section>
-<!-- End Hero -->
-
-
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="container">
-        <div class="copyright">
-            &copy; Kitty Consultants LLC
-        </div>
-        <div class="credits">
-
-            {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
-        </div>
-    </div>
-
-
-</footer><!-- End Footer -->
-
-<div id="preloader"></div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
-
-       
-    </div>
+    @include('modal.submission')
 </body>
 
-  <!-- Vendor JS Files -->
-  <script src="{{ asset('ST_resource/vendor/aos/aos.js') }}"></script>
-  <script src="{{ asset('ST_resource/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('ST_resource/vendor/glightbox/js/glightbox.min.js' )}}"></script>
-  <script src="{{ asset('ST_resource/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ asset('ST_resource/vendor/swiper/swiper-bundle.min.js') }}"></script>
-  <script src="{{ asset('ST_resource/vendor/php-email-form/validate.js' )}}"></script>
+<!-- Vendor JS Files -->
+<script src="{{ asset('ST_resource/vendor/aos/aos.js') }}"></script>
+<script src="{{ asset('ST_resource/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('ST_resource/vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ asset('ST_resource/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ asset('ST_resource/vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('ST_resource/vendor/php-email-form/validate.js') }}"></script>
 
-  <!-- Template Main JS File -->
-  <script src="{{ asset('ST_resource/js/main.js') }}"></script>
-  
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  @stack('scripts')
+<!-- Template Main JS File -->
+<script src="{{ asset('ST_resource/js/main.js') }}"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+@stack('scripts')
+
+
 </html>

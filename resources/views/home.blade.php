@@ -1,6 +1,6 @@
  @extends('layouts.app')
  @section('content')
-     {{-- @include('common.table') --}}
+ 
      @include('common.category')
  @endsection
 
