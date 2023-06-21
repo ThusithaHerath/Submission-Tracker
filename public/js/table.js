@@ -6,6 +6,14 @@ $(document).ready(function () {
     ],
   });
 
+  $(".submision_table").dataTable({
+    aoColumnDefs: [{ bSortable: false, aTargets: [0] }],
+
+    fnDrawCallback: function () {
+      $("input[type='search']").addClass("w-75");
+    },
+  });
+
   $(".filterOptions").select2({
     width: "resolve",
     allowClear: true,

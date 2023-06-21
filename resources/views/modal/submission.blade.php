@@ -1,10 +1,10 @@
 <!-- Modal -->
-<div class="modal fade" id="submission" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="submission" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content modalBody">
             <div class="modal-header border-0">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <h2 class=" ">Submission</h2>
+                    <h2 style="letter-spacing: 2px;font-size: 40px;" class="fw-bold">Submission</h2>
                 </h5>
                 <button type="button" class="btn-close rounded-5" data-bs-dismiss="modal" aria-label="Close"
                     style="background-color: rgba(128, 128, 128, 0.575);font-size:12px"></button>
@@ -14,36 +14,93 @@
                 <section id="testimonials" class="testimonials section-bg pb-0">
                     <div class="container" data-aos="fade-up">
 
-                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                            <div class="d-flex">
-                                <div>
+                        <div class="testimonials-slider swiper mb-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="d-flex row">
+                                <div class="col-6">
                                     <div class="section-title mb-4 p-0 mt-1">
                                         <h2>Filter Stories For Selection</h2>
                                     </div>
-                                    <div class="testimonial-item">
-                                        <p>
-                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
-                                            suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh
-                                            et. Maecen aliquam, risus at semper.
-                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                        </p>
+                                    <div class="testimonial-item p-4 rounded-3" style="background-color: #26231d">
+
+                                        <section id="book-a-table" class="book-a-table p-0">
+                                            <div class="container" data-aos="fade-up">
+                                                <form action=" " role="form" class="php-email-form"
+                                                    data-aos="fade-up" data-aos-delay="100">
+                                                    <div class="d-flex">
+                                                        <div class="form-group me-5">
+                                                            <label for="" class="form-label">Story</label>
+                                                            <input type="text" name="Story" class="form-control"
+                                                                id="Story">
+
+                                                        </div>
+                                                        <div class="form-group me-2 p-0">
+                                                            <label for="" class="form-label">Type</label>
+                                                            <select class="js-example-basic-multiple" multiple
+                                                                style="width:200px!important">
+                                                                <option value="AL">Alabama</option>
+                                                                <option value="WY">Wyoming</option>
+                                                            </select>
+
+                                                        </div>
+
+
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </section><!-- End Book A Table Section -->
+
+
 
                                     </div>
                                 </div>
 
-                                <div>
+                                <div class="col-6">
                                     <div class="section-title mb-4 p-0 mt-1">
                                         <h2>Filter Publishers For Selection</h2>
                                     </div>
-                                    <div class="testimonial-item">
-                                        <p>
-                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                            Export tempor illum tamen malis malis eram quae irure esse labore quem
-                                            cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua
-                                            noster fugiat irure amet legam anim culpa.
-                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                        </p>
+                                    <div class="testimonial-item p-4 rounded-3" style="background-color: #26231d">
+
+                                        <section id="book-a-table" class="book-a-table p-0">
+                                            <div class="container" data-aos="fade-up">
+                                                <form action=" " role="form" class="php-email-form"
+                                                    data-aos="fade-up" data-aos-delay="100">
+                                                    <div class="d-flex">
+                                                        <div class="form-group me-2 p-0">
+                                                            <label for="" class="form-label">Story</label>
+                                                            <input type="text" name="Story" class="form-control"
+                                                                id="Story">
+
+                                                        </div>
+                                                        <div class="form-group me-2 p-0">
+                                                            <label for="" class="form-label">Type</label>
+                                                            <select class="js-example-basic-multiple" multiple
+                                                                style="width:150px!important">
+                                                                <option value="AL">Alabama</option>
+                                                                <option value="WY">Wyoming</option>
+                                                            </select>
+
+                                                        </div>
+
+                                                        <div class="form-group p-0">
+                                                            <label for="" class="form-label"
+                                                                style="font-size:13.9px">Simultsneous
+                                                                Submission OK?</label>
+                                                            <select class="single-select" multiple
+                                                                style="width:150px!important;">
+                                                                <option value="yes">Yes</option>
+                                                                <option value="no">No</option>
+                                                                <option value="all">Show All</option>
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </section><!-- End Book A Table Section -->
+
+
 
                                     </div>
                                 </div>
@@ -52,17 +109,18 @@
                             </div>
                         </div>
 
-                        <div class="d-flex justify-content-around mt-4 section-title p-4">
+                        <div class="d-flex justify-content-around section-title p-1"
+                            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                             <p>Submission</p>
                         </div>
 
 
-                        <div class="container">
+                        <div class="container mt-4">
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="table-responsive custom-table-responsive">
+                                    <div class="table-responsive custom-table-responsive p-4">
 
-                                        <table class="table custom-table">
+                                        <table class="table custom-table submision_table">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">
@@ -74,7 +132,11 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="spacer">
-                                                    <td colspan="100"></td>
+
+                                                    <td colspan="3"></td>
+                                                    <td class="d-none"></td>
+                                                    <td class="d-none"></td>
+
                                                 </tr>
                                                 <tr scope="row">
                                                     <th scope="row">
@@ -88,9 +150,7 @@
                                                     </td>
                                                     <td>N/A</td>
                                                 </tr>
-                                                <tr class="spacer">
-                                                    <td colspan="100"></td>
-                                                </tr>
+
                                                 <tr scope="row">
                                                     <th scope="row">
                                                         <label class="control control--radio">
@@ -103,9 +163,7 @@
                                                     </td>
                                                     <td>N/A</td>
                                                 </tr>
-                                                <tr class="spacer">
-                                                    <td colspan="100"></td>
-                                                </tr>
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -113,7 +171,7 @@
                                 <div class="col-6">
                                     <div class="table-responsive custom-table-responsive">
 
-                                        <table class="table custom-table">
+                                        <table class="table custom-table submision_table" id="submision_table">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">
@@ -127,8 +185,15 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="spacer">
-                                                    <td colspan="100"></td>
+
+                                                    <td colspan="5"></td>
+                                                    <td class="d-none"></td>
+                                                    <td class="d-none"></td>
+                                                    <td class="d-none"></td>
+                                                    <td class="d-none"></td>
                                                 </tr>
+
+
                                                 <tr scope="row">
                                                     <th scope="row">
                                                         <label class="control control--radio">
@@ -147,9 +212,9 @@
                                                         N/A
                                                     </td>
                                                 </tr>
-                                                <tr class="spacer">
-                                                    <td colspan="100"></td>
-                                                </tr>
+
+
+
                                                 <tr scope="row">
                                                     <th scope="row">
                                                         <label class="control control--radio">
@@ -167,9 +232,6 @@
                                                     <td>
                                                         N/A
                                                     </td>
-                                                </tr>
-                                                <tr class="spacer">
-                                                    <td colspan="100"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -182,31 +244,35 @@
                         <section id="book-a-table" class="book-a-table">
                             <div class="container" data-aos="fade-up">
 
-                                <form action="forms/book-a-table.php" method="post" role="form"
-                                    class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+                                <form action="" method="post" role="form" class="php-email-form"
+                                    data-aos="fade-up" data-aos-delay="100">
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2 form-group">
+                                            <label for="" class="form-label">Submission Status</label>
                                             <input type="text" name="Submission Status" class="form-control"
                                                 id="Submission Status" placeholder="Submission Status">
-                                            <div class="validate"></div>
+
                                         </div>
                                         <div class="col-lg-2 col-md-2 form-group mt-3 mt-md-0">
+                                            <label for="" class="form-label">Submission</label>
                                             <input type="text" class="form-control" name="submission"
                                                 id="submission" placeholder="Submission">
-                                            <div class="validate"></div>
+
                                         </div>
                                         <div class="col-lg-2 col-md-2 form-group ">
+                                            <label for="" class="form-label">Pay</label>
                                             <input type="date" name="date" class="form-control" id="date"
                                                 placeholder="Pay" data-rule="minlen:4"
                                                 data-msg="Please enter at least 4 chars">
-                                            <div class="validate"></div>
+
                                         </div>
 
                                         <div class="col-6">
 
                                             <div class="form-group  ">
-                                                <textarea class="form-control" name="message" rows="5" placeholder="Note"></textarea>
-                                                <div class="validate"></div>
+                                                <label for="" class="form-label">Note</label>
+                                                <textarea class="form-control" name="message" rows="5" placeholder="Type here..."></textarea>
+
                                             </div>
                                         </div>
 
@@ -230,34 +296,3 @@
         </div>
     </div>
 </div>
-<script>
-    $(function() {
-
-        $('.js-check-all').on('click', function() {
-            alert('hi');
-            if ($(this).prop('checked')) {
-                $('th input[type="checkbox"]').each(function() {
-                    $(this).prop('checked', true);
-                    $(this).closest('tr').addClass('active');
-                })
-            } else {
-                $('th input[type="checkbox"]').each(function() {
-                    $(this).prop('checked', false);
-                    $(this).closest('tr').removeClass('active');
-                })
-            }
-
-        });
-
-        $('th[scope="row"] input[type="checkbox"]').on('click', function() {
-            if ($(this).closest('tr').hasClass('active')) {
-                $(this).closest('tr').removeClass('active');
-            } else {
-                $(this).closest('tr').addClass('active');
-            }
-        });
-
-
-
-    });
-</script>
