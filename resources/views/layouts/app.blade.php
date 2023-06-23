@@ -29,7 +29,7 @@
 
 <body>
 
-    <div id="app" class="p-3">
+    <div id="app">
 
 
         <!-- ======= Header ======= -->
@@ -44,50 +44,63 @@
                         <h1 class="logo me-auto me-lg-0 fw-bold fs-2 mt-1 text-white"> Submissions Tracker </h1>
                     </a>
                 </div>
-                <div class="d-flex">
 
-                    <button type="button" class="btn  book-a-table-btn scrollto d-none d-lg-flex me-4"
-                        data-bs-toggle="modal" data-bs-target="#submission">
-                        <i class="fa fa-plus me-2 mt-1"></i>Add New
-                    </button>
-                    <i class="fa fa-cog fs-3  mt-1 me-4 " data-bs-toggle="modal" data-bs-target="#setting"
-                        style="cursor: pointer"></i>
-                    <i class="fa fa-question-circle fs-3  mt-1  me-4" style="cursor: pointer"></i>
-                </div>
+
+                @if (Auth::check())
+                    <div class="d-flex">
+
+                        <button type="button" class="btn  book-a-table-btn scrollto d-none d-lg-flex me-4"
+                            data-bs-toggle="modal" data-bs-target="#submission">
+                            <i class="fa fa-plus me-2 mt-1"></i>Add New
+                        </button>
+                        <i class="fa fa-cog fs-3  mt-1 me-4 " data-bs-toggle="modal" data-bs-target="#setting"
+                            style="cursor: pointer"></i>
+                        <i class="fa fa-question-circle fs-3  mt-1  me-4" style="cursor: pointer"></i>
+                        <i class="fa fa-sign-out fs-3 mt-1 mx-4 text-dark-emphasis" style="cursor: pointer"></i>
+                    </div>
+                @endif
+
+
+
 
             </div>
         </header><!-- End Header -->
 
         <!-- ======= Hero Section ======= -->
-        <section id="hero" class="d-flex align-items-center">
-            <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
-                <div class="row">
+        @if (Auth::check())
+            <section id="hero" class="d-flex align-items-center">
+            @else
+                <section id="heroLogin" class="d-flex align-items-center">
+        @endif
+        <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
 
-                    <main>
-                        @yield('content')
-                    </main>
-
-                </div>
+                <main>
+                    @yield('content')
+                </main>
 
             </div>
+
+        </div>
         </section>
         <!-- End Hero -->
 
+        @if (Auth::check())
+            <!-- ======= Footer ======= -->
+            <footer id="footer">
+                <div class="container">
+                    <div class="copyright">
+                        &copy; Kitty Consultants LLC
+                    </div>
+                    <div class="credits">
 
-        <!-- ======= Footer ======= -->
-        <footer id="footer">
-            <div class="container">
-                <div class="copyright">
-                    &copy; Kitty Consultants LLC
+                        {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
+                    </div>
                 </div>
-                <div class="credits">
-
-                    {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
-                </div>
-            </div>
 
 
-        </footer><!-- End Footer -->
+            </footer><!-- End Footer -->
+        @endif
 
         <div id="preloader"></div>
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -118,5 +131,6 @@
 @stack('scripts')
 <script src="{{ asset('js/common.js') }}"></script>
 <script src="{{ asset('js/table.js') }}"></script>
+<script src="{{ asset('js/login.js') }}"></script>
 
 </html>
