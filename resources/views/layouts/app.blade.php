@@ -119,6 +119,9 @@
 
     @include('modal.submission')
     @include('modal.setting')
+    @include('modal.editStory')
+    @include('modal.editPublisher')
+    @include('modal.editSubmission')
 </body>
 
 <!-- Vendor JS Files -->
@@ -138,9 +141,11 @@
 <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 @stack('scripts')
+
 <script src="{{ asset('js/common.js') }}"></script>
 <script src="{{ asset('js/table.js') }}"></script>
 <script src="{{ asset('js/login.js') }}"></script>
+<script src="{{ asset('js/editModal.js') }}"></script>
 
 
 </html>
