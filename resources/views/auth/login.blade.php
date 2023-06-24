@@ -96,9 +96,9 @@
                              <div class="input-group">
                                  <div class="boxLogin mb-3">
                                      <span>
-                                         <input placeholder="Email" class="myInput @error('email') is-invalid @enderror"
-                                             type="email" value="{{ old('email') }}" required autocomplete="email"
-                                             autofocus name="email" />
+                                         <input placeholder="Email" class="myInput" type="email"
+                                             value="{{ old('email') }}" required autocomplete="email" autofocus
+                                             name="email" />
                                      </span>
                                      @error('email')
                                          <span class="invalid-feedback" role="alert">
@@ -110,30 +110,17 @@
                              <div class="input-group m-0">
                                  <div class="boxLogin">
                                      <span>
-                                         <input placeholder="Password"
-                                             class="myInput @error('password') is-invalid @enderror" type="password"
-                                             required autocomplete="current-password" name="password" />
+                                         <input placeholder="Password" class="myInput" type="text" required
+                                             autocomplete="current-password" name="password" />
                                      </span>
-                                     @error('password')
-                                         <span class="invalid-feedback" role="alert">
-                                             <strong>{{ $message }}</strong>
-                                         </span>
-                                     @enderror
+
                                  </div>
+                                 @error('password')
+                                     <span class="invalid-feedback" role="alert">
+                                         <strong>{{ $message }}</strong>
+                                     </span>
+                                 @enderror
                              </div>
-                             <!--
-                                                                                                                                                            <div class="row mb-3">
-                                                                                                                                                              <div class="col-md-6 offset-md-4">
-                                                                                                                                                                  <div class="form-check">
-                                                                                                                                                                      <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                                                                                                                                                                          {{ old('remember') ? 'checked' : '' }}>
-                                                                                                                                                  
-                                                                                                                                                                      <label class="form-check-label" for="remember">
-                                                                                                                                                                          {{ __('Remember Me') }}
-                                                                                                                                                                      </label>
-                                                                                                                                                                  </div>
-                                                                                                                                                              </div>
-                                                                                                                                                          </div> -->
 
                              @if (Route::has('password.request'))
                                  <div class="forget-password mt-3">
