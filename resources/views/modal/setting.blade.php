@@ -49,7 +49,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                        </section><!-- End Book A Table Section -->
+                                        </section>
 
 
 
@@ -70,16 +70,101 @@
                                                 <form action=" " role="form" class="php-email-form"
                                                     data-aos="fade-up" data-aos-delay="100">
 
+                                                    <div class="d-flex">
+                                                        <div class="p-0 w-100">
+                                                            <p class="m-0 p-0">To reorder, 1) Select Status. 2) Drag and
+                                                                Drop Selected Status</p>
+
+                                                            <ul id="sortable" class="ui-sortable mt-3">
+                                                                <li class="ui-state-default ui-sortable-handle d-flex">
+                                                                    <span
+                                                                        class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                                                    <th scope="row">
+                                                                        <label class="control control--checkbox me-5">
+                                                                            <input type="checkbox" name="" />
+                                                                            <div
+                                                                                class="control__indicator settingStatus">
+                                                                            </div>
+                                                                        </label>
+                                                                    </th>
+                                                                    Item 1
+
+                                                                </li>
+                                                                <li class="ui-state-default ui-sortable-handle d-flex">
+                                                                    <span
+                                                                        class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                                                    <th scope="row">
+                                                                        <label class="control control--checkbox me-5">
+                                                                            <input type="checkbox" name="" />
+                                                                            <div
+                                                                                class="control__indicator settingStatus">
+                                                                            </div>
+                                                                        </label>
+                                                                    </th>Item
+                                                                    2
+                                                                </li>
+                                                                <li class="ui-state-default ui-sortable-handle d-flex">
+                                                                    <span
+                                                                        class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                                                    <th scope="row">
+                                                                        <label class="control control--checkbox me-5">
+                                                                            <input type="checkbox" name="" />
+                                                                            <div
+                                                                                class="control__indicator settingStatus">
+                                                                            </div>
+                                                                        </label>
+                                                                    </th>Item
+                                                                    3
+                                                                </li>
+                                                                <li class="ui-state-default ui-sortable-handle d-flex">
+                                                                    <span
+                                                                        class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                                                    <th scope="row">
+                                                                        <label class="control control--checkbox me-5">
+                                                                            <input type="checkbox" name="" />
+                                                                            <div
+                                                                                class="control__indicator settingStatus">
+                                                                            </div>
+                                                                        </label>
+                                                                    </th>Item
+                                                                    4
+                                                                </li>
+                                                                <li class="ui-state-default ui-sortable-handle d-flex">
+                                                                    <span
+                                                                        class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                                                    <th scope="row">
+                                                                        <label class="control control--checkbox me-5">
+                                                                            <input type="checkbox" name="" />
+                                                                            <div
+                                                                                class="control__indicator settingStatus">
+                                                                            </div>
+                                                                        </label>
+                                                                    </th>Item
+                                                                    5
+                                                                </li>
 
 
-                                                    //content goes here
+                                                            </ul>
+                                                        </div>
+                                                        <div class="w-50">
+                                                            <div class=" position-absolute"
+                                                                style="margin-top: 130px;margin-left: -50px;">
+
+                                                                <div class="text-center"><button type="submit"
+                                                                        id="deleteSettingStatus"
+                                                                        style="background-color: rgba(235, 37, 77, 0.733)">Delete
+                                                                        Status</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
 
-
-                                                    <div class="d-flex justify-content-end mt-3">
+                                                    <div class="float-end">
 
                                                         <div class="text-center"><button type="submit"
-                                                                data-bs-dismiss="modal">Exit Settings</button>
+                                                                data-bs-dismiss="modal">Exit
+                                                                Settings</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -103,3 +188,29 @@
         </div>
     </div>
 </div>
+<style>
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 60%;
+        /* overflow: scroll; */
+        min-height: 200px;
+    }
+
+    #sortable li {
+        margin: 0 3px 3px 3px;
+        padding: 10px;
+        padding-left: 1.5em;
+        font-size: 17px;
+        background-color: rgba(0, 0, 0, 0.719);
+        border: 1px solid #d3af71;
+        cursor: pointer;
+
+    }
+
+    #sortable li span {
+        position: absolute;
+        margin-left: -1.3em;
+    }
+</style>

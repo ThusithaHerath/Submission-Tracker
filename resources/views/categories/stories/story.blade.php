@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="p-3" style="background-color: rgba(250, 235, 215, 0.363)">
+    {{-- <div class="p-3" style="background-color: rgba(250, 235, 215, 0.363)">
         <div class="container p-0" data-aos="fade-up">
 
             <div class="table-responsive overflow-hidden">
@@ -157,5 +157,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+    <h1>story </h1>
 @endsection

@@ -13,6 +13,8 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
     <!-- Vendor CSS Files -->
     <link href="{{ asset('ST_resource/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('ST_resource/vendor/aos/aos.css') }}" rel="stylesheet">
@@ -49,8 +51,8 @@
                 @if (Auth::check())
                     <div class="d-flex">
 
-                        <button type="button" class="btn  book-a-table-btn scrollto d-none d-lg-flex me-4"
-                            data-bs-toggle="modal" data-bs-target="#submission">
+                        <button type="button" class="book-a-table-btn btn d-lg-flex h-100 me-4" data-bs-toggle="modal"
+                            data-bs-target="#submission">
                             <i class="fa fa-plus me-2 mt-1"></i>Add New
                         </button>
                         <i class="fa fa-cog fs-3  mt-1 me-4 " data-bs-toggle="modal" data-bs-target="#setting"
@@ -58,7 +60,10 @@
                         <i class="fa fa-question-circle fs-3  mt-1  me-4" style="cursor: pointer"></i>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit" class="btn btn-warning" style="cursor: pointer">Log Out</button>
+                            {{-- <button type="submit" class="btn btn-warning"Log Out</button> --}}
+                            <button type="submit" class="  btn d-lg-flex h-100 text-white">
+                                <i class="fa fa-sign-out me-2 mt-1"></i>Log Out
+                            </button>
                         </form>
                     </div>
                 @endif
@@ -128,6 +133,7 @@
 <script src="{{ asset('ST_resource/js/main.js') }}"></script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
@@ -135,5 +141,6 @@
 <script src="{{ asset('js/common.js') }}"></script>
 <script src="{{ asset('js/table.js') }}"></script>
 <script src="{{ asset('js/login.js') }}"></script>
+
 
 </html>

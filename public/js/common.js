@@ -12,4 +12,19 @@ $(document).ready(function () {
     dropdownParent: $("#submission"),
     width: "resolve",
   });
+
+  //setting modal sortable section
+  $("#sortable").sortable();
+
+  // remove selected setting status
+
+  $("#deleteSettingStatus").click(function () {
+    $("input:checkbox").each(function () {
+      var $this = $(this);
+
+      if ($this.is(":checked")) {
+        $(this).parent().parent().remove();
+      }
+    });
+  });
 });
