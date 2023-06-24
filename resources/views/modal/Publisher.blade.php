@@ -35,7 +35,7 @@
                                                           <div class="form-group col-4">
                                                               <label for="" class="form-label">Type</label>
                                                               <select class="single-select-publishernew" multiple
-                                                                  id="data_type" style="width:200px!important">
+                                                                  style="width:200px!important">
                                                                   <option value="N/A">N/A</option>
                                                                   <option value="AL">Alabama</option>
                                                                   <option value="WY">Wyoming</option>
@@ -51,7 +51,7 @@
                                                                   Submission OK? <span class="text-danger">*</span>
                                                               </label>
                                                               <select class="single-select-publishernew" multiple
-                                                                  id="data_submission" style="width:150px!important;">
+                                                                  style="width:150px!important;">
                                                                   <option value="Unknown">Unknown</option>
                                                                   <option value="yes">Yes</option>
                                                                   <option value="no">No</option>

@@ -7,8 +7,6 @@
 
     <title>Submission Tracker</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <style>
@@ -31,7 +29,6 @@
         }
 
         html {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
             line-height: 1.5
         }
 
@@ -383,11 +380,7 @@
         }
     </style>
 
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
-    </style>
+
 </head>
 
 <body class="antialiased">

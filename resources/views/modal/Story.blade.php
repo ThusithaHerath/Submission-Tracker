@@ -35,7 +35,7 @@
                                                                   <label for=""
                                                                       class="form-label">Status</label>
                                                                   <select class="single-select-storyNew" multiple
-                                                                      style="width:150px!important" id="data_status">
+                                                                      style="width:150px!important" id="dataStatus">
                                                                       <option value="N/A">N/A</option>
                                                                       <option value="hold">Alabama</option>
                                                                       <option value="WY">Wyoming</option>
@@ -44,7 +44,7 @@
                                                               <div class="form-group me-2 p-0">
                                                                   <label for="" class="form-label">Type</label>
                                                                   <select class="single-select-storyNew" multiple
-                                                                      id="data__type" style="width:150px!important">
+                                                                      id="dataType" style="width:150px!important">
                                                                       <option value="N/A">N/A</option>
                                                                       <option value="AL">Alabama</option>
                                                                       <option value="WY">Wyoming</option>
