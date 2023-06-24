@@ -33,7 +33,7 @@ $(document).ready(function () {
 
   $(".single-select-storyNew").select2({
     maximumSelectionLength: 1,
-    dropdownParent: $("#storyModal"),
+    dropdownParent: $("#storyModalNew"),
     width: "resolve",
   });
 

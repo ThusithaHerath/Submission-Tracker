@@ -22,23 +22,26 @@
 
                                           <section id="book-a-table" class="book-a-table p-0">
                                               <div class="container" data-aos="fade-up">
-                                                  <form action=" " role="form" class="php-email-form"
-                                                      data-aos="fade-up" data-aos-delay="100">
-
+                                                  <form action="{{ url('http://127.0.0.1:8000/api/publisher/store') }}"
+                                                      method="POST" enctype="multipart/form-data" role="form"
+                                                      class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+                                                      @csrf
 
                                                       <div class="d-flex row">
                                                           <div class="form-group col-8">
                                                               <label for="" class="form-label">Publisher</label>
                                                               <input type="text" class="form-control"
-                                                                  id="data_publisher">
+                                                                  name="publisher">
                                                           </div>
                                                           <div class="form-group col-4">
                                                               <label for="" class="form-label">Type</label>
                                                               <select class="single-select-publishernew" multiple
-                                                                  style="width:200px!important">
+                                                                  style="width:200px!important" name="type">
                                                                   <option value="N/A">N/A</option>
-                                                                  <option value="AL">Alabama</option>
-                                                                  <option value="WY">Wyoming</option>
+                                                                  @foreach ($type as $type)
+                                                                      <option value="{{ $type->id }}">
+                                                                          {{ $type->PublisherType_Name }}</option>
+                                                                  @endforeach
                                                               </select>
 
                                                           </div>
@@ -51,26 +54,27 @@
                                                                   Submission OK? <span class="text-danger">*</span>
                                                               </label>
                                                               <select class="single-select-publishernew" multiple
-                                                                  style="width:150px!important;">
-                                                                  <option value="Unknown">Unknown</option>
-                                                                  <option value="yes">Yes</option>
-                                                                  <option value="no">No</option>
-                                                                  <option value="all">Show All</option>
+                                                                  style="width:150px!important;"
+                                                                  name="simultaneoussubmission">
+                                                                  <option value="0">Unknown</option>
+                                                                  <option value="1">Yes</option>
+                                                                  <option value="2">No</option>
+                                                                  <option value="3">Show All</option>
                                                               </select>
                                                           </div>
                                                           <div class="form-group col-3 mt-4">
                                                               <label for="" class="form-label">Rank</label>
-                                                              <input type="number" class="form-control" id="data_rank">
+                                                              <input type="number" class="form-control" name="rank">
                                                           </div>
                                                           <div class="form-group col-3 mt-4">
                                                               <label for="" class="form-label">Deadline</label>
-                                                              <input type="text" class="form-control"
-                                                                  id="data_deadline">
+                                                              <input type="date" class="form-control"
+                                                                  name="deadline">
                                                           </div>
                                                           <div class="form-group col-3 mt-4">
                                                               <label for="" class="form-label">Contact</label>
-                                                              <input type="text" class="form-control"
-                                                                  id="data_contact" maxlength="16">
+                                                              <input type="text" class="form-control" maxlength="16"
+                                                                  name="contact">
                                                           </div>
 
                                                       </div>

@@ -60,7 +60,7 @@
                         @endif
                         @if (request()->segment(count(request()->segments())) == 'stories')
                             <button type="button" class="book-a-table-btn btn d-lg-flex h-100 me-4"
-                                data-bs-toggle="modal" data-bs-target="#storyModal">
+                                data-bs-toggle="modal" data-bs-target="#storyModalNew">
                                 <i class="fa fa-plus me-2 mt-1"></i>Add New
                             </button>
                         @endif
@@ -139,11 +139,8 @@
 
     @include('modal.submission')
     @include('modal.setting')
-    @include('modal.editStory')
-    @include('modal.editPublisher')
     @include('modal.editSubmission')
-    {{-- @include('modal.Story') --}}
-    @include('modal.Publisher')
+
 </body>
 
 <!-- Vendor JS Files -->
