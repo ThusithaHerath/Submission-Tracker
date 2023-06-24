@@ -1,9 +1,9 @@
-  <div class="modal fade" id="PublisherModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="editPublisherModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content modalBody">
               <div class="modal-header border-0">
                   <h5 class="modal-title" id="exampleModalLabel">
-                      <h2 style="letter-spacing: 2px;font-size: 40px;" class="fw-bold">Publisher</h2>
+                      <h2 style="letter-spacing: 2px;font-size: 40px;" class="fw-bold">Edit Publisher</h2>
                   </h5>
                   <button type="button" class="btn-close rounded-5" data-bs-dismiss="modal" aria-label="Close"
                       style="background-color: rgba(128, 128, 128, 0.575);font-size:12px"></button>
@@ -34,8 +34,8 @@
                                                           </div>
                                                           <div class="form-group col-4">
                                                               <label for="" class="form-label">Type</label>
-                                                              <select class="single-select-publishernew" multiple
-                                                                  id="data_type" style="width:200px!important">
+                                                              <select class="single-select" multiple id="data_type"
+                                                                  style="width:200px!important">
                                                                   <option value="N/A">N/A</option>
                                                                   <option value="AL">Alabama</option>
                                                                   <option value="WY">Wyoming</option>
@@ -50,7 +50,7 @@
                                                               <label for="" class="form-label">Simultaneous
                                                                   Submission OK? <span class="text-danger">*</span>
                                                               </label>
-                                                              <select class="single-select-publishernew" multiple
+                                                              <select class="single-select" multiple
                                                                   id="data_submission" style="width:150px!important;">
                                                                   <option value="Unknown">Unknown</option>
                                                                   <option value="yes">Yes</option>

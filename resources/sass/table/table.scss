@@ -70,17 +70,17 @@
 //   color: #fff;
 // }
 
-// .custom-table tbody tr:hover td i.fa-pencil,
-// .custom-table tbody tr:focus td i.fa-pencil {
-//   color: #3462c7de;
-//   cursor: pointer;
-// }
+.custom-table tbody tr:hover td i.fa-pencil,
+.custom-table tbody tr:focus td i.fa-pencil {
+  color: #d69525;
+  cursor: pointer;
+}
 
-// .custom-table tbody tr:hover td i.fa-trash,
-// .custom-table tbody tr:focus td i.fa-trash {
-//   color: #e93b43b6;
-//   cursor: pointer;
-// }
+.custom-table tbody tr:hover td i.fa-trash,
+.custom-table tbody tr:focus td i.fa-trash {
+  color: #e93b43b6;
+  cursor: pointer;
+}
 
 // .custom-table .td-box-wrap {
 //   padding: 0;

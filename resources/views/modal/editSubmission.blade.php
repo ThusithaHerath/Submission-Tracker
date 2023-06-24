@@ -1,16 +1,17 @@
 <!-- Modal -->
-<div class="modal fade" id="submission" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editSubmissionModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content modalBody">
             <div class="modal-header border-0">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    <h2 style="letter-spacing: 2px;font-size: 40px;" class="fw-bold">Submission</h2>
+                    <h2 style="letter-spacing: 2px;font-size: 40px;" class="fw-bold">Edit Submission</h2>
                 </h5>
                 <button type="button" class="btn-close rounded-5" data-bs-dismiss="modal" aria-label="Close"
                     style="background-color: rgba(128, 128, 128, 0.575);font-size:12px"></button>
             </div>
             <div class="modal-body">
-
+                <!-- =======  modal Section ======= -->
                 <section id="testimonials" class="testimonials section-bg pb-0">
                     <div class="container" data-aos="fade-up">
 
@@ -35,7 +36,7 @@
                                                         </div>
                                                         <div class="form-group me-2 p-0">
                                                             <label for="" class="form-label">Type</label>
-                                                            <select class="multi-select-submission" multiple
+                                                            <select class="js-example-basic-multiple" multiple
                                                                 style="width:200px!important">
                                                                 <option value="AL">Alabama</option>
                                                                 <option value="WY">Wyoming</option>
@@ -48,7 +49,7 @@
 
                                                 </form>
                                             </div>
-                                        </section>
+                                        </section><!-- End Book A Table Section -->
 
 
 
@@ -74,7 +75,7 @@
                                                         </div>
                                                         <div class="form-group me-2 p-0">
                                                             <label for="" class="form-label">Type</label>
-                                                            <select class="multi-select-submission" multiple
+                                                            <select class="js-example-basic-multiple" multiple
                                                                 style="width:150px!important">
                                                                 <option value="AL">Alabama</option>
                                                                 <option value="WY">Wyoming</option>
@@ -86,7 +87,7 @@
                                                             <label for="" class="form-label"
                                                                 style="font-size:13.7px">Simultsneous
                                                                 Submission OK?</label>
-                                                            <select class="single-select-submission" multiple
+                                                            <select class="single-select-submissionEdit" multiple
                                                                 style="width:150px!important;">
                                                                 <option value="yes">Yes</option>
                                                                 <option value="no">No</option>
@@ -98,7 +99,7 @@
 
                                                 </form>
                                             </div>
-                                        </section>
+                                        </section><!-- End Book A Table Section -->
 
 
 
@@ -249,8 +250,9 @@
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2 form-group">
                                             <label for="" class="form-label">Submission Status</label>
-                                            <select class="single-select-submission" multiple
-                                                style="width:150px!important;">
+                                            <select class="single-select-submissionEdit" multiple
+                                                style="width:150px!important;" id="data___status">
+                                                <option value="N/A">N/A</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -259,15 +261,14 @@
                                         </div>
                                         <div class="col-lg-2 col-md-2 form-group mt-3 mt-md-0">
                                             <label for="" class="form-label">Submission</label>
-                                            <input type="text" class="form-control" name="submission"
-                                                placeholder="">
+                                            <input type="date" class="form-control" name="submission"
+                                                placeholder="" id="data___dateSubmit">
 
                                         </div>
                                         <div class="col-lg-2 col-md-2 form-group ">
                                             <label for="" class="form-label">Pay</label>
-                                            <input type="date" name="date" class="form-control" id="date"
-                                                placeholder="Pay" data-rule="minlen:4"
-                                                data-msg="Please enter at least 4 chars">
+                                            <input type="text" name="pay" class="form-control"
+                                                id="data___pay">
 
                                         </div>
 
@@ -275,21 +276,21 @@
 
                                             <div class="form-group  ">
                                                 <label for="" class="form-label">Note</label>
-                                                <textarea class="form-control" name="message" rows="5" placeholder="Type here..."></textarea>
+                                                <textarea id="data___notes" class="form-control" name="message" rows="5" placeholder="Type here..."></textarea>
 
                                             </div>
                                         </div>
 
                                     </div>
                                     <div class="d-flex justify-content-end mt-3">
-                                        <div class="text-center"data-bs-dismiss="modal"><button type="submit"
+                                        <div class="text-center" data-bs-dismiss="modal"><button type="submit"
                                                 class="bg-transparent border me-3">Cancel</button></div>
                                         <div class="text-center"><button type="submit">Save</button></div>
                                     </div>
                                 </form>
 
                             </div>
-                        </section>
+                        </section><!-- End Book A Table Section -->
 
                         </form>
                     </div>

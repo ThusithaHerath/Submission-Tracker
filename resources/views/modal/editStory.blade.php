@@ -1,9 +1,9 @@
-      <div class="modal fade" id="storyModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <div class="modal-content modalBody">
                   <div class="modal-header border-0">
                       <h5 class="modal-title" id="exampleModalLabel">
-                          <h2 style="letter-spacing: 2px;font-size: 40px;" class="fw-bold">Story</h2>
+                          <h2 style="letter-spacing: 2px;font-size: 40px;" class="fw-bold">Edit Story</h2>
                       </h5>
                       <button type="button" class="btn-close rounded-5" data-bs-dismiss="modal" aria-label="Close"
                           style="background-color: rgba(128, 128, 128, 0.575);font-size:12px"></button>
@@ -34,7 +34,7 @@
                                                               <div class="form-group me-5">
                                                                   <label for=""
                                                                       class="form-label">Status</label>
-                                                                  <select class="single-select-storyNew" multiple
+                                                                  <select class="single-storyEdit" multiple
                                                                       style="width:150px!important" id="data_status">
                                                                       <option value="N/A">N/A</option>
                                                                       <option value="hold">Alabama</option>
@@ -43,7 +43,7 @@
                                                               </div>
                                                               <div class="form-group me-2 p-0">
                                                                   <label for="" class="form-label">Type</label>
-                                                                  <select class="single-select-storyNew" multiple
+                                                                  <select class="single-storyEdit" multiple
                                                                       id="data__type" style="width:150px!important">
                                                                       <option value="N/A">N/A</option>
                                                                       <option value="AL">Alabama</option>

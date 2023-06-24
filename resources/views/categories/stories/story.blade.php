@@ -80,8 +80,10 @@
                 </table>
             </div>
 
-        </div>
-        
-    </div>
+                            </tbody>
+                        </table>
 
+                    </div>
+                </div>
+    </section>
 @endsection
