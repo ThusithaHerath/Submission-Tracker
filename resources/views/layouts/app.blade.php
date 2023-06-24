@@ -142,7 +142,7 @@
     @include('modal.editStory')
     @include('modal.editPublisher')
     @include('modal.editSubmission')
-    @include('modal.Story')
+    {{-- @include('modal.Story') --}}
     @include('modal.Publisher')
 </body>
 

@@ -2,7 +2,7 @@
 @section('content')
     <section id="why-us" class="why-us pt-4">
         <div class="container p-0" data-aos="fade-up">
-
+            
             <div class="section-title">
                 <h2>Category</h2>
                 <p style="letter-spacing: 1px">Publishers</p>
@@ -10,7 +10,7 @@
             <div class="table-responsive overflow-hidden">
                 <div class="p-3" style="background-color: rgba(250, 235, 215, 0.363)">
                     <div class="container p-0" data-aos="fade-up">
-
+                        <button type="button" class="btn btn-info mb-3"  data-bs-toggle="modal" data-bs-target="#publisher" >Add New Publisher</button>
                 <table class="table table-striped custom-table" id="custom-table">
                     <thead>
                         <tr>
