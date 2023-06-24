@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('publisher_types', function (Blueprint $table) {
             $table->id();
-            $table->string('PublisherType_Name');
+            $table->enum('PublisherType_Name', [
+                'Periodical',
+                'Book',
+                'Contest',
+            ])->default('Book')->nullable();
             $table->timestamps();
         });
     }

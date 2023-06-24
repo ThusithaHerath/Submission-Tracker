@@ -17,8 +17,8 @@ return new class extends Migration {
             $table->enum('StoryType_Name', [
                 'Article',
                 'Book',
+                'Poem',
                 'PoemRhyming',
-                'PoemNonRhyming',
                 'ShortStory',
                 'Song'
             ])->default('Book')->nullable();

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\HomeController;
 use App\Http\Controllers\API\StoryController;
+use App\Http\Controllers\API\PublisherController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-// Route::post('/logout', [LogoutController::class,'logout'])->name('logout');
+
+
+//story 
+Route::prefix('story')->group(function () {
+	Route::post('store', 'App\Http\Controllers\API\StoryController@store')->name('story.store');
+});
+
+//publisher 
+Route::prefix('publisher')->group(function () {
+	Route::post('store', 'App\Http\Controllers\API\PublisherController@store')->name('publisher.store');
+});

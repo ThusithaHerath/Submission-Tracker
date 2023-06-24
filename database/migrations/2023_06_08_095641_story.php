@@ -15,6 +15,9 @@ return new class extends Migration {
         Schema::create('story', function (Blueprint $table) {
             $table->id('Story_ID');
             $table->string('Story_Name')->nullable();
+            $table->integer('Lines')->nullable();
+            $table->integer('Words')->nullable();
+            $table->string('Summary')->nullable();
             $table->unsignedBigInteger('StoryStatus_ID')->nullable();
             $table->foreign('StoryStatus_ID')->references('StoryCompletionStatus_ID')->on('story_completion_status');
             $table->unsignedBigInteger('StoryType_ID')->nullable();
