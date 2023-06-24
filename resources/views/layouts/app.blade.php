@@ -114,6 +114,8 @@
 
     @include('modal.submission')
     @include('modal.setting')
+    @include('modal.story')
+    @include('modal.publisher')
 </body>
 
 <!-- Vendor JS Files -->

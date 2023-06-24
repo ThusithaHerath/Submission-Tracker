@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\StoryController;
+use App\Http\Controllers\API\SubmissionController; 
+use App\Http\Controllers\API\PublisherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +17,12 @@ use App\Http\Controllers\API\StoryController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/category/stories', [StoryController::class, 'index'])->name('category.stories');
-Route::get('/category/submissions', [StoryController::class, 'index'])->name('category.submissions');
-Route::get('/category/publishers', [StoryController::class, 'index'])->name('category.publishers');
+Route::get('/category/submissions', [SubmissionController::class, 'index'])->name('category.submissions');
+Route::get('/category/publishers', [PublisherController::class, 'index'])->name('category.publishers');
