@@ -70,28 +70,29 @@
                             <th scope="col"class="pb-3 pe-3"> <span>Action</span></th>
                         </tr>
                     </thead>
+                    @foreach ($publisher as $publisher)
                     <tr scope="row " class="fs-6">
                         <td class="text-center data-1 delete-row"> <i class="fa fa-trash"></i></td>
-                        <td class="data-2">
-                            1442
+                        <td class="data-2">{{$publisher->Publisher}}</td>
+                        <td class="data-3">{{$publisher->publisher_type_id}}</td>
+                        <td class="data-4"> 
+                            @if($publisher->SimultaneousSubmissionAllowed == '1')
+                            Yes
+                            @else
+                            No 
+                            @endif
                         </td>
-                        <td class="data-3"> James Yates</td>
-                        <td class="data-4">
-                            Web Designer
-                            <small class="d-block">Far far away, behind the word
-                                mountains</small>
-                        </td>
-                        <td class="data-5">+63 983 0962 971</td>
-                        <td class="data-6">NY University</td>
-                        <td class="data-6">NY University</td>
-                        <td class="data-6">NY University</td>
-                        <td class="data-6">NY University</td>
-                        <td class="data-6">NY University</td>
-                        <td class="data-6">NY University</td>
-                        <td class="text-center editBtn data-7" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i
-                                class="fa fa-pencil"></i>
+                        <td class="data-5">{{$publisher->Rating}}</td>
+                        <td class="data-6">{{$publisher->DeadlineDATE}}</td>
+                        <td class="data-6">{{$publisher->Contact}}</td>
+                        <td class="data-6">{{$publisher->Notes}}</td>
+                        <td class="data-6">N/A</td>
+                        <td class="data-6">N/A</td>
+                        <td class="data-6">N/A</td>
+                        <td class="text-center editBtn data-7" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-pencil"></i>
                         </td>
                     </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
@@ -102,4 +103,6 @@
                         </div>
                     </div>
     </section>
+
+    
 @endsection

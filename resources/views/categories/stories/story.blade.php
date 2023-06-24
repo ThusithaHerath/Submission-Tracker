@@ -86,4 +86,6 @@
                     </div>
                 </div>
     </section>
+
+    @include('modal.Story')
 @endsection

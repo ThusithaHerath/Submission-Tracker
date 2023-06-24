@@ -136,14 +136,14 @@
 
 
     </div>
-
+    @include('modal.Publisher')
     @include('modal.submission')
     @include('modal.setting')
     @include('modal.editStory')
     @include('modal.editPublisher')
     @include('modal.editSubmission')
-    {{-- @include('modal.Story') --}}
-    @include('modal.Publisher')
+    
+  
 </body>
 
 <!-- Vendor JS Files -->

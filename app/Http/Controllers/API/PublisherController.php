@@ -12,7 +12,8 @@ class PublisherController extends Controller
     public function index()
     {
         $type = PublisherType::all();
-        return view('categories.publishers.publisher',compact('type'));
+        $publisher = Publisher::all();
+        return view('categories.publishers.publisher',compact('type','publisher'));
     }
 
     public function store(Request $request){
