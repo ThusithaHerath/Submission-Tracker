@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('address1');
             $table->string('address2');
             $table->string('city');
-            $table->char('state',2);
+            $table->string('state');
             $table->string('zip');
             $table->date('lisense_date');
             $table->string('permission');

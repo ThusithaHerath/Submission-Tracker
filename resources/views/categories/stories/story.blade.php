@@ -1,9 +1,6 @@
 @extends('layouts.app')
 @section('content')
     <div class="p-3" style="background-color: rgba(250, 235, 215, 0.363)">
-
-
-
         <div class="container p-0" data-aos="fade-up">
 
             <div class="table-responsive overflow-hidden">
@@ -17,8 +14,6 @@
                             <th scope="col" class="p-0">
                                 <div class="d-flex justify-content-between ">
                                     <span class="p-3">Header 1</span>
-
-
                                     <nav id="navbar" class="navbar order-last  order-lg-0">
                                         <ul>
                                             <li class="dropdown "><a href="#"> <i class="bi bi-chevron-down"></i></a>

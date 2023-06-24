@@ -56,7 +56,10 @@
                         <i class="fa fa-cog fs-3  mt-1 me-4 " data-bs-toggle="modal" data-bs-target="#setting"
                             style="cursor: pointer"></i>
                         <i class="fa fa-question-circle fs-3  mt-1  me-4" style="cursor: pointer"></i>
-                        <i class="fa fa-sign-out fs-3 mt-1 mx-4 text-dark-emphasis" style="cursor: pointer"></i>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="btn btn-warning" style="cursor: pointer">Log Out</button>
+                        </form>
                     </div>
                 @endif
 
