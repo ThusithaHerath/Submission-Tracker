@@ -137,6 +137,8 @@
                      </form>
                  </div>
                  <div class="signUp-form form-wraper">
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
                      <div>
                          <div class="form-title">
                              <h2 class="fw-bold">Sign Up</h2>
@@ -147,86 +149,100 @@
                                  <div class="input-group">
                                      <div class="boxLogin">
                                          <span>
-                                             <input placeholder="First Name" class="myInput" type="text" />
+                                             <input placeholder="First Name" class="myInput"  name="fname" type="text" />
                                          </span>
                                      </div>
                                  </div>
                                  <div class="input-group">
                                      <div class="boxLogin">
                                          <span>
-                                             <input placeholder="Address Line 1" class="myInput" type="text" />
+                                             <input placeholder="Address Line 1" name="address1" class="myInput"  type="text" />
                                          </span>
                                      </div>
                                  </div>
                                  <div class="input-group">
                                      <div class="boxLogin">
                                          <span>
-                                             <input placeholder="City" class="myInput" type="text" />
+                                             <input placeholder="City" name="city" class="myInput" type="text" />
                                          </span>
                                      </div>
                                  </div>
                                  <div class="input-group">
                                      <div class="boxLogin">
                                          <span>
-                                             <input placeholder="Zip" class="myInput" type="text" />
+                                             <input placeholder="Zip" name="zip" class="myInput" type="text" />
                                          </span>
                                      </div>
                                  </div>
                                  <div class="input-group">
                                      <div class="boxLogin">
                                          <span>
-                                             <input placeholder="Email" class="myInput" type="email" />
+                                             <input placeholder="Email" class="myInput" name="email" type="email" />
                                          </span>
                                      </div>
                                  </div>
+
+                                 <div class="input-group">
+                                    <div class="boxLogin">
+                                        <span>
+                                            <input placeholder="License Date" class="myInput" name="ldate" type="date" />
+                                        </span>
+                                    </div>
+                                </div>
 
                              </div>
                              <div class="col-6">
                                  <div class="input-group">
                                      <div class="boxLogin">
                                          <span>
-                                             <input placeholder="Last Name" class="myInput" type="text" />
+                                             <input placeholder="Last Name" class="myInput" name="lname" type="text" />
                                          </span>
                                      </div>
                                  </div>
                                  <div class="input-group">
                                      <div class="boxLogin">
                                          <span>
-                                             <input placeholder="Address Line 2" class="myInput" type="text" />
+                                             <input placeholder="Address Line 2" name="address2" class="myInput" type="text" />
                                          </span>
                                      </div>
                                  </div>
                                  <div class="input-group">
                                      <div class="boxLogin">
                                          <span>
-                                             <input placeholder="State" class="myInput" type="text" />
+                                             <input placeholder="State" name="state" class="myInput" type="text" />
                                          </span>
                                      </div>
                                  </div>
                                  <div class="input-group">
                                      <div class="boxLogin">
                                          <span>
-                                             <input placeholder="Phone No." class="myInput" type="text" maxlength="16" />
+                                             <input placeholder="Phone No." class="myInput" name="phone" type="text" maxlength="16" />
                                          </span>
                                      </div>
                                  </div>
                                  <div class="input-group">
                                      <div class="boxLogin">
                                          <span>
-                                             <input placeholder="Password" class="myInput" type="text" />
+                                             <input placeholder="Password" name="password"  class="myInput" type="text" />
                                          </span>
                                      </div>
                                  </div>
+                                 <div class="input-group">
+                                    <div class="boxLogin">
+                                        <span>
+                                            <input placeholder="Permission" name="permission" class="myInput" type="text" />
+                                        </span>
+                                    </div>
+                                </div>
 
                              </div>
                          </div>
                      </div>
 
-
-
                      <div class="action-button">
-                         <button>Sign Up</button>
+                         <button type="submit">Sign Up</button>
                      </div>
+                    </form>
                  </div>
              </div>
          </div>

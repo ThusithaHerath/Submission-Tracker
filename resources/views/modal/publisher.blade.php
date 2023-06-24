@@ -5,21 +5,21 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalCenterTitle">New Publisher</h5>
         </div>
-        <form action="">
+        <form action="{{url('http://127.0.0.1:8000/api/publisher/store')}}" method="POST" enctype="multipart/form-data">
           @csrf
         <div class="modal-body text-black">
             <div class="row mt-2">
                 <div class="col">
                     <label class="mb-2" >Publisher:</label>
-                    <input type="text" class="form-control" placeholder="Publisher Name" required>
+                    <input type="text" name="publisher" class="form-control" placeholder="Publisher Name" required>
                   </div>
                 <div class="col">
                   <label class="mb-2" >Type:</label>
-                  <select class="form-select" aria-label="Default select example" required>
+                  <select class="form-select" name="type" aria-label="Default select example" required>
                     <option selected>Select type</option>
-                    <option value="1">Book</option>
-                    <option value="2">Periodical</option>
-                    <option value="2">Contest</option>
+                    @foreach ($type as $type)
+                    <option value="{{$type->id}}">{{$type->PublisherType_Name}}</option>
+                    @endforeach
                   </select>
                 </div>
             </div>
@@ -27,23 +27,23 @@
             <div class="row mt-2">
                 <div class="col">
                     <label class="mb-2" >Simultaneous Submission OK *:</label>
-                    <select class="form-select" aria-label="Default select example" required>
+                    <select class="form-select" name="simultaneoussubmission" aria-label="Default select example" required>
                     <option selected>Unknown</option>
                     <option value="1">Yes</option>
-                    <option value="2">No</option>
+                    <option value="0">No</option>
                     </select>
                 </div>
                 <div class="col">
                     <label class="mb-2" >Rank:</label>
-                    <input type="text" class="form-control" placeholder="Lines" required>
+                    <input type="text" name="rank" class="form-control" placeholder="Rank" required>
                 </div>
                 <div class="col">
                     <label class="mb-2" >Deadline:</label>
-                    <input type="date" class="form-control" placeholder="Words" required>
+                    <input type="date" name="deadline" class="form-control" placeholder="Deadline" required>
                 </div>
                 <div class="col">
                     <label class="mb-2" >Contact:</label>
-                    <input type="number" class="form-control" placeholder="Words" required>
+                    <input type="number" name="contact" class="form-control" placeholder="Contact" required>
                 </div>
             </div>
         </div>

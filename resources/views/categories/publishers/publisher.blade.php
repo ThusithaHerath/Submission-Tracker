@@ -15,71 +15,52 @@
                             </th>
                             <th scope="col" class="p-0">
                                 <div class="d-flex justify-content-between ">
-                                    <span class="p-3">Submitted ?</span>
-                                    <nav id="navbar" class="navbar order-last  order-lg-0">
-                                        <ul>
-                                            <li class="dropdown "><a href="#"> <i class="bi bi-chevron-down"></i></a>
-                                                <ul class="p-0">
-                                                    <div class="px-2 filterSection p-4">
-
-                                                        <span
-                                                            style="letter-spacing: normal;   text-transform: capitalize!important;"
-                                                            class="fs-6 fw-lighter">Sort
-                                                            By</span>
-                                                        <div class="d-flex mt-2 mb-3">
-                                                            <button type="button"
-                                                                class="btn btn-outline-primary me-3 Asc-btn">Asc</button>
-                                                            <button type="button"
-                                                                class="btn btn-outline-secondary Des-btn">Des</button>
-                                                        </div>
-                                                        <span
-                                                            style="letter-spacing: normal;   text-transform: capitalize!important;"
-                                                            class="fs-6 fw-lighter">Filter
-                                                            By</span>
-                                                        <div class="d-flex mt-2">
-                                                            <select class="filterOptions" multiple
-                                                                data-placeholder="select here..." style="width: 240px">
-                                                                <option value="All">All
-                                                                </option>
-                                                                <option value="AL">
-                                                                    Alabama</option>
-                                                                <option value="WY">
-                                                                    Wyoming</option>
-                                                            </select>
-                                                        </div>
-
-                                                    </div>
-                                                </ul>
-                                            </li>
-                                        </ul>
-
-
-                                    </nav>
+                                    <span class="p-3">Publisher:</span>
                                 </div>
                             </th>
                             <th scope="col" class="p-0">
                                 <div class="d-flex justify-content-between ">
-                                    <span class="p-3">Status</span>
+                                    <span class="p-3">Type:</span>
                                 </div>
                             </th>
                             <th scope="col" class="p-0">
                                 <div class="d-flex justify-content-between ">
-                                    <span class="p-3">Type</span>
+                                    <span class="p-3">Simultaneous Submissions OK</span>
                                 </div>
                             </th>
                             <th scope="col" class="p-0">
                                 <div class="d-flex justify-content-between ">
-                                    <span class="p-3">Lines</span>
+                                    <span class="p-3">Rank</span>
                                 </div>
                             </th>
                             <th scope="col" class="p-0">
                                 <div class="d-flex justify-content-between ">
-                                    <span class="p-3">Words</span>
+                                    <span class="p-3">Deadline</span>
                                 </div>
                             </th>
                             <th scope="col" class="p-0">
                                 <div class="d-flex justify-content-between ">
-                                    <span class="p-3">Summary</span>
+                                    <span class="p-3">Contact</span>
+                                </div>
+                            </th>
+                            <th scope="col" class="p-0">
+                                <div class="d-flex justify-content-between ">
+                                    <span class="p-3">Notes</span>
+                                </div>
+                            </th>
+                            <th scope="col" class="p-0">
+                                <div class="d-flex justify-content-between ">
+                                    <span class="p-3">Total Submissions</span>
+                                </div>
+                            </th>
+                            <th scope="col" class="p-0">
+                                <div class="d-flex justify-content-between ">
+                                    <span class="p-3">Total Accepted</span>
+                                </div>
+                            </th>
+                            <th scope="col" class="p-0">
+                                <div class="d-flex justify-content-between ">
+                                    <span class="p-3">Total Earned</span>
                                 </div>
                             </th>
                             <th scope="col"class="pb-3 pe-3"> <span>Action</span></th>
@@ -97,6 +78,10 @@
                                 mountains</small>
                         </td>
                         <td class="data-5">+63 983 0962 971</td>
+                        <td class="data-6">NY University</td>
+                        <td class="data-6">NY University</td>
+                        <td class="data-6">NY University</td>
+                        <td class="data-6">NY University</td>
                         <td class="data-6">NY University</td>
                         <td class="data-6">NY University</td>
                         <td class="text-center editBtn data-7" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i

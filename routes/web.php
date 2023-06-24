@@ -26,3 +26,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/category/stories', [StoryController::class, 'index'])->name('category.stories');
 Route::get('/category/submissions', [SubmissionController::class, 'index'])->name('category.submissions');
 Route::get('/category/publishers', [PublisherController::class, 'index'])->name('category.publishers');
+
+
