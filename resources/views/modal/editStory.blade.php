@@ -23,15 +23,18 @@
 
                                               <section id="book-a-table" class="book-a-table p-0">
                                                   <div class="container" data-aos="fade-up">
-                                                      <form action="{{ url('http://127.0.0.1:8000/api/story/store') }}"
+                                                      <form action="{{ url('http://127.0.0.1:8000/api/story/update') }}"
                                                           method="POST" enctype="multipart/form-data" role="form"
                                                           class="php-email-form" data-aos="fade-up"
                                                           data-aos-delay="100">
                                                           @csrf
+
                                                           <div class="form-group mb-3">
+                                                              <input type="text" id="data_id" hidden
+                                                                  name="story_id">
                                                               <label for="" class="form-label">Story</label>
-                                                              <input type="text" class="form-control"
-                                                                  id="data_story">
+                                                              <input type="text" class="form-control" id="data_story"
+                                                                  name="editStory">
                                                           </div>
 
                                                           <div class="d-flex">
@@ -39,7 +42,8 @@
                                                                   <label for=""
                                                                       class="form-label">Status</label>
                                                                   <select class="single-storyEdit" multiple
-                                                                      style="width:150px!important" id="data_status">
+                                                                      name="editStatus" style="width:150px!important"
+                                                                      id="data_status">
                                                                       <option value="N/A">N/A</option>
                                                                       @foreach ($story_status as $status)
                                                                           <option
@@ -52,7 +56,8 @@
                                                               <div class="form-group me-2 p-0">
                                                                   <label for="" class="form-label">Type</label>
                                                                   <select class="single-storyEdit" multiple
-                                                                      id="data__type" style="width:150px!important">
+                                                                      name="editType" id="data__type"
+                                                                      style="width:150px!important">
                                                                       <option value="N/A">N/A</option>
                                                                       @foreach ($story_type as $type)
                                                                           <option value="{{ $type->StoryType_ID }}">
@@ -67,13 +72,13 @@
                                                           <div class="d-flex mb-3">
                                                               <div class="form-group me-5">
                                                                   <label for="" class="form-label">Lines</label>
-                                                                  <input type="number"
+                                                                  <input type="number" name="editLines"
                                                                       class="form-control"style="width:150px!important"
                                                                       id="data_lines">
                                                               </div>
                                                               <div class="form-group me-2 p-0">
                                                                   <label for="" class="form-label">Words</label>
-                                                                  <input type="number"
+                                                                  <input type="number" name="editWords"
                                                                       class="form-control"style="width:150px!important"
                                                                       id="data_words">
                                                               </div>
@@ -87,10 +92,11 @@
                                                           </div>
                                                           <div class="d-flex justify-content-end mt-3">
                                                               <div class="text-center"><button type="submit"
+                                                                      onclick="event.preventDefault()"
                                                                       class="bg-transparent border me-3"data-bs-dismiss="modal">Cancel</button>
                                                               </div>
                                                               <div class="text-center"><button
-                                                                      type="submit">Save</button></div>
+                                                                      type="submit">Edit</button></div>
                                                           </div>
 
                                                       </form>

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 @section('content')
+    <div class="section-title">
+        <h2>Category</h2>
+        <p style="letter-spacing: 1px">Stories</p>
+    </div>
     <div class="p-3" style="background-color: rgba(250, 235, 215, 0.363)">
 
         @if (session('story_added'))
@@ -61,8 +65,11 @@
                     @foreach ($story as $story)
                         <tr scope="row " class="fs-6">
                             <td class="text-center data-1">
-                                <a class="fa fa-trash" href="{{url('api/story/delete/'.$story->id)}}"></a>
+                                <a class="fa fa-trash" href="{{ url('api/story/delete/' . $story->Story_ID) }}"></a>
+                                <input type="text" value="{{ $story->Story_ID }}" class="data-id" hidden>
+
                             </td>
+
                             <td class="data-2">N/A</td>
                             <td class="data-story">{{ $story->Story_Name }}</td>
                             <td class="data-status">{{ $story->Story_Name }}</td>
@@ -90,5 +97,9 @@
 
     @include('modal.Story')
 @endsection
-@include('modal.Story', ['story_status' => $story_status,'story_type'=>$story_type, 'story'=>$story])
-@include('modal.editStory', ['story_status' => $story_status,'story_type'=>$story_type, 'story'=>$story])
+@include('modal.Story', ['story_status' => $story_status, 'story_type' => $story_type, 'story' => $story])
+@include('modal.editStory', [
+    'story_status' => $story_status,
+    'story_type' => $story_type,
+    'story' => $story,
+])

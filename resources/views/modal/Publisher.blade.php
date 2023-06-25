@@ -82,6 +82,7 @@
                                                               class="text-danger">*</span></span>
                                                       <div class="d-flex justify-content-end mt-4">
                                                           <div class="text-center"><button type="submit"
+                                                                  onclick="event.preventDefault()"
                                                                   class="bg-transparent border me-3"data-bs-dismiss="modal">Cancel</button>
                                                           </div>
                                                           <div class="text-center"><button type="submit">Save</button>

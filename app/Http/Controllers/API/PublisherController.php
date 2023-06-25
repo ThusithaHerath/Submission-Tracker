@@ -36,6 +36,24 @@ class PublisherController extends Controller
         }
     }
 
+
+    public function update(Request $request)
+    {
+       
+        Publisher::where('id', $request->publisher_id)
+            ->update([
+                'Publisher' => $request->publisher_name,
+                'publisher_type_id' => $request->publisher_type,
+                'SimultaneousSubmissionAllowed' => $request->publisher_submission,
+                'DeadlineDATE' => $request->publisher_deadline,
+                'Rating' => $request->publisher_rank,
+                'Contact' => $request->publisher_contact,
+            ]);
+
+            return redirect()->back()->with('publisher_updated', 'Publisher has succefully updated!');
+    }
+
+
     public function destroy($id){
 
         if (Publisher::where('id','=', $id)->exists()) {

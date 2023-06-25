@@ -22,20 +22,22 @@
 
                                           <section id="book-a-table" class="book-a-table p-0">
                                               <div class="container" data-aos="fade-up">
-                                                  <form action=" " role="form" class="php-email-form"
-                                                      data-aos="fade-up" data-aos-delay="100">
+                                                  <form action="{{ url('http://127.0.0.1:8000/api/publisher/update') }}"
+                                                      method="POST" enctype="multipart/form-data" role="form"
+                                                      class="php-email-form" data-aos="fade-up" data-aos-delay="100">
 
-
+                                                      <input type="text" id="data_publisher__id" name="publisher_id"
+                                                          hidden>
                                                       <div class="d-flex row">
                                                           <div class="form-group col-8">
                                                               <label for="" class="form-label">Publisher</label>
                                                               <input type="text" class="form-control"
-                                                                  id="data_publisher">
+                                                                  id="data_publisher" name="publisher_name">
                                                           </div>
                                                           <div class="form-group col-4">
                                                               <label for="" class="form-label">Type</label>
                                                               <select class="single-select" multiple id="data_type"
-                                                                  style="width:200px!important">
+                                                                  style="width:200px!important" name="publisher_type">
                                                                   <option value="N/A">N/A</option>
                                                                   @foreach ($type as $type)
                                                                       <option value="{{ $type->id }}">
@@ -53,26 +55,29 @@
                                                                   Submission OK? <span class="text-danger">*</span>
                                                               </label>
                                                               <select class="single-select" multiple
-                                                                  id="data_submission" style="width:150px!important;">
-                                                                  <option value="Unknown">Unknown</option>
-                                                                  <option value="yes">Yes</option>
-                                                                  <option value="no">No</option>
-                                                                  <option value="all">Show All</option>
+                                                                  name="publisher_submission" id="data_submission"
+                                                                  style="width:150px!important;">
+                                                                  <option value="0">Unknown</option>
+                                                                  <option value="1">Yes</option>
+                                                                  <option value="2">No</option>
+                                                                  <option value="3">Show All</option>
                                                               </select>
                                                           </div>
                                                           <div class="form-group col-3 mt-4">
                                                               <label for="" class="form-label">Rank</label>
-                                                              <input type="number" class="form-control" id="data_rank">
+                                                              <input type="number" class="form-control" id="data_rank"
+                                                                  name="publisher_rank">
                                                           </div>
                                                           <div class="form-group col-3 mt-4">
                                                               <label for="" class="form-label">Deadline</label>
                                                               <input type="text" class="form-control"
-                                                                  id="data_deadline">
+                                                                  name="publisher_deadline" id="data_deadline">
                                                           </div>
                                                           <div class="form-group col-3 mt-4">
                                                               <label for="" class="form-label">Contact</label>
                                                               <input type="text" class="form-control"
-                                                                  id="data_contact" maxlength="16">
+                                                                  name="publisher_contact" id="data_contact"
+                                                                  maxlength="16">
                                                           </div>
 
                                                       </div>
@@ -80,9 +85,11 @@
                                                               class="text-danger">*</span></span>
                                                       <div class="d-flex justify-content-end mt-4">
                                                           <div class="text-center"><button type="submit"
-                                                                  class="bg-transparent border me-3"data-bs-dismiss="modal">Cancel</button>
+                                                                  class="bg-transparent border me-3"data-bs-dismiss="modal"
+                                                                  onclick="event.preventDefault()">Cancel</button>
                                                           </div>
-                                                          <div class="text-center"><button type="submit">Save</button>
+                                                          <div class="text-center"><button
+                                                                  type="submit">Edit</button>
                                                           </div>
                                                       </div>
 

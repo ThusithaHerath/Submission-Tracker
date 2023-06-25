@@ -10,7 +10,7 @@
             <div class="table-responsive overflow-hidden">
                 <div class="p-3" style="background-color: rgba(250, 235, 215, 0.363)">
                     <div class="container p-0" data-aos="fade-up">
-                        <table class="table table-striped custom-table" id="custom-table">
+                        <table class="table table-striped  " id="custom-table">
                             <thead>
                                 <tr>
                                     <th scope="col"class="pb-3 text-center px-3">
@@ -71,8 +71,11 @@
                             </thead>
                             @foreach ($publisher as $publisher)
                                 <tr scope="row " class="fs-6">
-                                    <td class="text-center data-1"> 
-                                        <a class="fa fa-trash" href="{{url('api/publisher/delete/'.$publisher->id)}}"></a>
+                                    <td class="text-center data-1">
+                                        <a class="fa fa-trash"
+                                            href="{{ url('api/publisher/delete/' . $publisher->id) }}"></a>
+                                        <input type="text" value="{{ $publisher->id }}" class="data_publisher__id"
+                                            hidden>
                                     </td>
                                     <td class="data-publisher">{{ $publisher->Publisher }}</td>
                                     <td class="data-type">{{ $publisher->publisher_type_id }}</td>
@@ -105,8 +108,6 @@
                 </div>
             </div>
     </section>
-
-    
 @endsection
 @include('modal.Publisher', ['publisher' => $publisher, 'type' => $type])
-@include('modal.editPublisher', ['type' => $type,'publisher' => $publisher])
+@include('modal.editPublisher', ['type' => $type, 'publisher' => $publisher])

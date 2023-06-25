@@ -1,6 +1,7 @@
 // ON SELECTING ROW
 $(".editBtnStory").click(function () {
   //FINDING ELEMENTS OF ROWS AND STORING THEM IN VARIABLES
+  var data_id = $(this).parents("tr").children().children(".data-id").val();
   var data_story = $(this).parents("tr").find(".data-story").text();
   var data_status = $(this).parents("tr").find(".data-status").text();
   var data_type = $(this).parents("tr").find(".data-type").text();
@@ -8,6 +9,7 @@ $(".editBtnStory").click(function () {
   var data_words = $(this).parents("tr").find(".data-words").text();
   var data_summary = $(this).parents("tr").find(".data-summary").text();
   // CREATING DATA TO SHOW ON MODEL
+  $("#data_id").val(data_id);
   $("#data_story").val(data_story);
   $("#data_status").val(data_status).trigger("change");
   $("#data__type").val(data_type).trigger("change");
@@ -19,6 +21,11 @@ $(".editBtnStory").click(function () {
 // ON SELECTING ROW
 $(".editBtnPublisher").click(function () {
   //FINDING ELEMENTS OF ROWS AND STORING THEM IN VARIABLES
+  var data_id = $(this)
+    .parents("tr")
+    .children()
+    .children(".data_publisher__id")
+    .val();
   var data_publisher = $(this).parents("tr").find(".data-publisher").text();
   var data_type = $(this).parents("tr").find(".data-type").text();
   var data_submission = $(this).parents("tr").find(".data-submission").text();
@@ -27,6 +34,7 @@ $(".editBtnPublisher").click(function () {
   var data_contact = $(this).parents("tr").find(".data-contact").text();
 
   // CREATING DATA TO SHOW ON MODEL
+  $("#data_publisher__id").val(data_id);
   $("#data_publisher").val(data_publisher);
   $("#data_type").val(data_type).trigger("change");
   $("#data_submission").val(data_submission).trigger("change");
