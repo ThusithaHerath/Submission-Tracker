@@ -71,7 +71,9 @@
                             </thead>
                             @foreach ($publisher as $publisher)
                                 <tr scope="row " class="fs-6">
-                                    <td class="text-center data-1 delete-row"> <i class="fa fa-trash"></i></td>
+                                    <td class="text-center data-1"> 
+                                        <a class="fa fa-trash" href="{{url('api/publisher/delete/'.$publisher->id)}}"></a>
+                                    </td>
                                     <td class="data-publisher">{{ $publisher->Publisher }}</td>
                                     <td class="data-type">{{ $publisher->publisher_type_id }}</td>
                                     <td class="data-submission">
@@ -106,5 +108,5 @@
 
     
 @endsection
-@include('modal.Publisher', ['publisher' => $publisher])
-@include('modal.editPublisher', ['type' => $type])
+@include('modal.Publisher', ['publisher' => $publisher, 'type' => $type])
+@include('modal.editPublisher', ['type' => $type,'publisher' => $publisher])

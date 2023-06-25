@@ -25,9 +25,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //story 
 Route::prefix('story')->group(function () {
 	Route::post('store', 'App\Http\Controllers\API\StoryController@store')->name('story.store');
+	Route::get('delete/{id}', 'App\Http\Controllers\API\StoryController@destroy')->name('story.delete');
 });
 
 //publisher 
 Route::prefix('publisher')->group(function () {
 	Route::post('store', 'App\Http\Controllers\API\PublisherController@store')->name('publisher.store');
+	Route::get('delete/{id}', 'App\Http\Controllers\API\PublisherController@destroy')->name('publisher.delete');
 });

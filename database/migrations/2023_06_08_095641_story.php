@@ -13,7 +13,7 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('story', function (Blueprint $table) {
-            $table->id('Story_ID');
+            $table->id();
             $table->string('Story_Name')->nullable();
             $table->integer('Lines')->nullable();
             $table->integer('Words')->nullable();

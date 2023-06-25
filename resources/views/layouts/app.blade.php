@@ -136,7 +136,6 @@
 
 
     </div>
-    @include('modal.Publisher')
     @include('modal.submission')
     @include('modal.setting')
     @include('modal.editSubmission')

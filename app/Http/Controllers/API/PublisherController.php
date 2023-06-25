@@ -35,4 +35,17 @@ class PublisherController extends Controller
             return redirect()->back()->with('publisher_added','New publisher has been added!');
         }
     }
+
+    public function destroy($id){
+
+        if (Publisher::where('id','=', $id)->exists()) {
+
+            $publisher = Publisher::find($id);
+            $publisher->delete();
+           
+            return redirect()->back()->with('publisher_removed','Publisher removed successfully!');
+		}else{
+            return redirect()->back()->with('publisher_not_found','Sorry! Publisher not found!');
+        }
+    }
 }

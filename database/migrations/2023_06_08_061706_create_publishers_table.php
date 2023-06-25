@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('publishers', function (Blueprint $table) {
             $table->id();
             $table->string('Publisher');
-            $table->boolean('SimultaneousSubmissionAllowed');
+            $table->string('SimultaneousSubmissionAllowed');
             $table->string('Rating');
             $table->date('DeadlineDATE');
             $table->string('Contact');

@@ -60,7 +60,9 @@
                     </thead>
                     @foreach ($story as $story)
                         <tr scope="row " class="fs-6">
-                            <td class="text-center data-1 delete-row"> <i class="fa fa-trash"></i></td>
+                            <td class="text-center data-1">
+                                <a class="fa fa-trash" href="{{url('api/story/delete/'.$story->id)}}"></a>
+                            </td>
                             <td class="data-2">N/A</td>
                             <td class="data-story">{{ $story->Story_Name }}</td>
                             <td class="data-status">{{ $story->Story_Name }}</td>
@@ -88,5 +90,5 @@
 
     @include('modal.Story')
 @endsection
-@include('modal.Story', ['story_status' => $story_status])
-@include('modal.editStory', ['story_status' => $story_status])
+@include('modal.Story', ['story_status' => $story_status,'story_type'=>$story_type, 'story'=>$story])
+@include('modal.editStory', ['story_status' => $story_status,'story_type'=>$story_type, 'story'=>$story])

@@ -15,9 +15,9 @@ return new class extends Migration {
         Schema::create('story_version_ofAnother_story', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('Story_ID_Child')->nullable();
-            $table->foreign('Story_ID_Child')->references('Story_ID')->on('story');
+            $table->foreign('Story_ID_Child')->references('id')->on('story');
             $table->unsignedBigInteger('Story_ID_Parent')->nullable();
-            $table->foreign('Story_ID_Parent')->references('Story_ID')->on('story');
+            $table->foreign('Story_ID_Parent')->references('id')->on('story');
             $table->timestamps();
         });
 

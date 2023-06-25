@@ -36,4 +36,17 @@ class StoryController extends Controller
         }
     }
 
+    public function destroy($id){
+
+        if (Story::where('id','=', $id)->exists()) {
+
+            $story = Story::find($id);
+            $story->delete();
+           
+            return redirect()->back()->with('story_removed','Story removed successfully!');
+		}else{
+            return redirect()->back()->with('story_not_found','Sorry! Story not found!');
+        }
+    }
+
 }

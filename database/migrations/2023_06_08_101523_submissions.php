@@ -24,7 +24,7 @@ return new class extends Migration {
             $table->foreign('user_ID)')->references('id')->on('users');
 
             $table->unsignedBigInteger('Story_ID')->nullable();
-            $table->foreign('Story_ID')->references('Story_ID')->on('story');
+            $table->foreign('Story_ID')->references('id')->on('story');
 
             $table->unsignedBigInteger('Publisher_ID')->nullable();
             $table->foreign('Publisher_ID')->references('id')->on('publishers');
