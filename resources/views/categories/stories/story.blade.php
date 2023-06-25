@@ -2,17 +2,16 @@
 @section('content')
     <div class="p-3" style="background-color: rgba(250, 235, 215, 0.363)">
 
-        @if(session('story_added'))
-        <h5 class="alert alert-success">{{session('story_added')}}</h5>
+        @if (session('story_added'))
+            <h5 class="alert alert-success">{{ session('story_added') }}</h5>
         @endif
-        @if(session('story_exists'))
-        <h5 class="alert alert-warning">{{session('story_exists')}}</h5>
+        @if (session('story_exists'))
+            <h5 class="alert alert-warning">{{ session('story_exists') }}</h5>
         @endif
 
         <div class="container p-0" data-aos="fade-up">
 
-            <button type="button" class="btn btn-info mb-3"  data-bs-toggle="modal" data-bs-target="#story" >Add New Story</button>
-            
+
             <div class="table-responsive overflow-hidden">
 
                 <table class="table table-striped custom-table" id="custom-table">
@@ -63,16 +62,16 @@
                         <tr scope="row " class="fs-6">
                             <td class="text-center data-1 delete-row"> <i class="fa fa-trash"></i></td>
                             <td class="data-2">N/A</td>
-                            <td class="data-3">{{$story->Story_Name}}</td>
-                            <td class="data-3">{{$story->Story_Name}}</td>
-                            <td class="data-3">{{$story->Story_Name}}</td>
+                            <td class="data-story">{{ $story->Story_Name }}</td>
+                            <td class="data-status">{{ $story->Story_Name }}</td>
+                            <td class="data-type">{{ $story->Story_Name }}</td>
                             {{-- <td class="data-3">{{$story->sstatus->StoryCompletionStatus_ID}}</td>
                             <td class="data-4">{{$story->sstype->StoryType_Name}}</td> --}}
-                            <td class="data-5">{{$story->Lines}}</td>
-                            <td class="data-6">{{$story->Words}}</td>
-                            <td class="data-6">{{$story->Summary}}</td>
-                            <td class="text-center editBtn data-7" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i
-                                    class="fa fa-pencil"></i>
+                            <td class="data-lines">{{ $story->Lines }}</td>
+                            <td class="data-words">{{ $story->Words }}</td>
+                            <td class="data-summary">{{ $story->Summary }}</td>
+                            <td class="text-center editBtnStory data-7" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"> <i class="fa fa-pencil"></i>
                             </td>
                         </tr>
                     @endforeach
@@ -80,12 +79,14 @@
                 </table>
             </div>
 
-                            </tbody>
-                        </table>
+            </tbody>
+            </table>
 
-                    </div>
-                </div>
+        </div>
+    </div>
     </section>
 
     @include('modal.Story')
 @endsection
+@include('modal.Story', ['story_status' => $story_status])
+@include('modal.editStory', ['story_status' => $story_status])

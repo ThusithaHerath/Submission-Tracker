@@ -19,7 +19,7 @@ class StoryController extends Controller
     }
 
     public function store(Request $request){
-
+ 
         if (Story::where('Story_Name','=', $request->input('story'))->exists()) {
 			return redirect()->back()->with('story_exists','Sorry! Story with the provided name already exists!');
 		}else{

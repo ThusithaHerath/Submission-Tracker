@@ -37,8 +37,10 @@
                                                               <select class="single-select" multiple id="data_type"
                                                                   style="width:200px!important">
                                                                   <option value="N/A">N/A</option>
-                                                                  <option value="AL">Alabama</option>
-                                                                  <option value="WY">Wyoming</option>
+                                                                  @foreach ($type as $type)
+                                                                      <option value="{{ $type->id }}">
+                                                                          {{ $type->PublisherType_Name }}</option>
+                                                                  @endforeach
                                                               </select>
 
                                                           </div>

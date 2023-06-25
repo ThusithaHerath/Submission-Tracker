@@ -9,6 +9,7 @@
                           style="background-color: rgba(128, 128, 128, 0.575);font-size:12px"></button>
                   </div>
                   <div class="modal-body">
+
                       <!-- =======  modal Section ======= -->
                       <section id="testimonials" class="pb-0 pt-0 rounded-3 section-bg testimonials"
                           style="box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
@@ -22,8 +23,11 @@
 
                                               <section id="book-a-table" class="book-a-table p-0">
                                                   <div class="container" data-aos="fade-up">
-                                                      <form action=" " role="form" class="php-email-form"
-                                                          data-aos="fade-up" data-aos-delay="100">
+                                                      <form action="{{ url('http://127.0.0.1:8000/api/story/store') }}"
+                                                          method="POST" enctype="multipart/form-data" role="form"
+                                                          class="php-email-form" data-aos="fade-up"
+                                                          data-aos-delay="100">
+                                                          @csrf
                                                           <div class="form-group mb-3">
                                                               <label for="" class="form-label">Story</label>
                                                               <input type="text" class="form-control"
@@ -37,8 +41,12 @@
                                                                   <select class="single-storyEdit" multiple
                                                                       style="width:150px!important" id="data_status">
                                                                       <option value="N/A">N/A</option>
-                                                                      <option value="hold">Alabama</option>
-                                                                      <option value="WY">Wyoming</option>
+                                                                      @foreach ($story_status as $status)
+                                                                          <option
+                                                                              value="{{ $status->StoryCompletionStatus_ID }}">
+                                                                              {{ $status->StoryCompletionStatus_Name }}
+                                                                          </option>
+                                                                      @endforeach
                                                                   </select>
                                                               </div>
                                                               <div class="form-group me-2 p-0">
@@ -46,8 +54,10 @@
                                                                   <select class="single-storyEdit" multiple
                                                                       id="data__type" style="width:150px!important">
                                                                       <option value="N/A">N/A</option>
-                                                                      <option value="AL">Alabama</option>
-                                                                      <option value="WY">Wyoming</option>
+                                                                      @foreach ($story_type as $type)
+                                                                          <option value="{{ $type->StoryType_ID }}">
+                                                                              {{ $type->StoryType_Name }}</option>
+                                                                      @endforeach
                                                                   </select>
 
                                                               </div>
@@ -72,7 +82,7 @@
                                                           </div>
                                                           <div class="form-group  mb-4">
                                                               <label for="" class="form-label">Summary</label>
-                                                              <textarea class="form-control" name="message" rows="5" id="data_summary" placeholder="Type here..."></textarea>
+                                                              <textarea class="form-control" name="summary" rows="5" id="data_summary" placeholder="Type here..."></textarea>
 
                                                           </div>
                                                           <div class="d-flex justify-content-end mt-3">

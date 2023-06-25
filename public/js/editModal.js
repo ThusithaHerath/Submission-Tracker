@@ -1,5 +1,5 @@
 // ON SELECTING ROW
-$(".editBtn").click(function () {
+$(".editBtnStory").click(function () {
   //FINDING ELEMENTS OF ROWS AND STORING THEM IN VARIABLES
   var data_story = $(this).parents("tr").find(".data-story").text();
   var data_status = $(this).parents("tr").find(".data-status").text();
