@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('story_completion_status', function (Blueprint $table) {
             $table->id('StoryCompletionStatus_ID');
-            $table->enum('StoryCompletionStatus_Name', ['Draft', 'Complete','In Progress', 'On Hold'])->default('Draft');
+            $table->string('StoryCompletionStatus_Name');
             $table->timestamps();
         });
     }

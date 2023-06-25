@@ -39,3 +39,8 @@ Route::prefix('submission')->group(function () {
 	Route::post('store', 'App\Http\Controllers\API\SubmissionController@store')->name('submission.store');
 	Route::get('delete/{id}', 'App\Http\Controllers\API\SubmissionController@destroy')->name('submission.delete');
 });
+
+//settings
+Route::prefix('settings')->group(function () {
+	Route::post('addField', 'App\Http\Controllers\API\SettingsController@add')->name('settings.addField');
+});

@@ -14,15 +14,7 @@ return new class extends Migration {
     {
         Schema::create('story_type', function (Blueprint $table) {
             $table->id('StoryType_ID');
-            $table->enum('StoryType_Name', [
-                'Article',
-                'Book',
-                'Poem',
-                'PoemRhyming',
-                'ShortStory',
-                'Song'
-            ])->default('Book')->nullable();
-
+            $table->string('StoryType_Name');
             $table->timestamps();
         });
     }

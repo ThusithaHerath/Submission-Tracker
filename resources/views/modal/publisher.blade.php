@@ -39,8 +39,7 @@
                                                                   style="width:200px!important" name="type">
                                                                   <option value="N/A">N/A</option>
                                                                   @foreach ($type as $type)
-                                                                      <option value="{{ $type->id }}">
-                                                                          {{ $type->PublisherType_Name }}</option>
+                                                                      <option value="{{ $type->id }}">{{ $type->PublisherType_Name }}</option>
                                                                   @endforeach
                                                               </select>
 

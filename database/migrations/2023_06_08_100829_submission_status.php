@@ -14,15 +14,7 @@ return new class extends Migration {
     {
         Schema::create('submission_status', function (Blueprint $table) {
             $table->id('SubmissionStatus_ID');
-            $table->enum('SubmissionStatus_Name', [
-                'Submitted',
-                'Accepted',
-                'Declined',
-                'Published',
-                'ReSubmitted',
-                'Withdrawn',
-                'HonorableMention'
-            ])->nullable();
+            $table->string('SubmissionStatus_Name');
             $table->string('SubmissionStatusLocksStory')->nullable();
             $table->timestamps();
         });

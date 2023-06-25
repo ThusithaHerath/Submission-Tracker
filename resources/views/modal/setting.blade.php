@@ -24,22 +24,25 @@
 
                                         <section id="book-a-table" class="book-a-table p-0">
                                             <div class="container" data-aos="fade-up">
-                                                <form action=" " role="form" class="php-email-form"
-                                                    data-aos="fade-up" data-aos-delay="100">
+                                                <form action="{{ url('http://127.0.0.1:8000/api/settings/addField') }}"
+                                                method="POST" enctype="multipart/form-data" role="form" data-aos="fade-up" data-aos-delay="100" >
+                                                    @csrf
                                                     <div class="d-flex">
                                                         <div class="form-group me-3">
                                                             <label for="" class="form-label">Field To
                                                                 Modify</label><br>
                                                             <select class="setting-multiple" multiple
-                                                                style="width:230px!important">
-                                                                <option value="AL">Alabama</option>
-                                                                <option value="WY">Wyoming</option>
+                                                                style="width:230px!important" name="mfield">
+                                                                <option value="1">Story Status</option>
+                                                                <option value="2">Story type</option>
+                                                                <option value="3">Publisher type</option>
+                                                                <option value="4">Submission status</option>
                                                             </select>
 
                                                         </div>
                                                         <div class="form-group me-3 p-0">
                                                             <label for="" class="form-label">Input New</label>
-                                                            <input type="text" name="Story" class="form-control"
+                                                            <input type="text" name="field_value" class="form-control"
                                                                 id="Story">
                                                         </div>
                                                         <div class="mt-2 text-center w-25"><button class="mt-4 w-100"
