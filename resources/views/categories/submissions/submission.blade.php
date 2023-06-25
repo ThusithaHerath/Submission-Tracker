@@ -58,24 +58,26 @@
                                         <th scope="col"class="pb-3 pe-3"> <span>Action</span></th>
                                     </tr>
                                 </thead>
-                                <tr scope="row " class="fs-6">
-                                    <td class="text-center data-1 delete-row"> <i class="fa fa-trash"></i></td>
-                                    <td class="data-dateSubmit">N/A</td>
-                                    <td class="data-locked">N/A</td>
-                                    <td class="data-story">N/A</td>
-                                    <td class="data-publisher">N/A</td>
-                                    <td class="data-status">N/A</td>
-                                    <td class="data-notes">N/A</td>
-                                    <td class="data-pay">0</td>
+                                <tbody>
+                               @foreach ($submission as $submission)
+                               <tr scope="row " class="fs-6">
+                                <td class="text-center data-1 delete-row">
+                                    <a class="fa fa-trash" href="{{url('api/submission/delete/'.$submission->id)}}"></a>
+                                </td>
+                                <td class="data-dateSubmit">{{$submission->SubmissionDate}}</td>
+                                <td class="data-locked">N/A</td>
+                                <td class="data-story">{{$submission->Story_ID}}</td>
+                                <td class="data-publisher">{{$submission->Publisher_ID}}</td>
+                                <td class="data-status">{{$submission->SubmissionStatus_ID}}</td>
+                                <td class="data-notes">{{$submission->Notes}}</td>
+                                <td class="data-pay">{{$submission->FeePaid}}</td>
 
-                                    <td class="text-center editBtnSubmission data-7" data-bs-toggle="modal"
-                                        data-bs-target="#editSubmissionModal">
-                                        <i class="fa fa-pencil"></i>
-                                    </td>
+                                <td class="text-center editBtnSubmission data-7" data-bs-toggle="modal"
+                                    data-bs-target="#editSubmissionModal">
+                                    <i class="fa fa-pencil"></i>
+                                </td>
                                 </tr>
-
-
-
+                               @endforeach
                                 </tbody>
                             </table>
 
@@ -83,3 +85,6 @@
                     </div>
     </section>
 @endsection
+
+@include('modal.submission', ['submission_status' => $submission_status,'submission'=>$submission,'story'=>$story,'publisher'=>$publisher])
+@include('modal.editSubmission', ['submission_status' => $submission_status,'submission'=>$submission,'story'=>$story,'publisher'=>$publisher])

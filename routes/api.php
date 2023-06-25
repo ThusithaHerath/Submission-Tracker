@@ -33,3 +33,9 @@ Route::prefix('publisher')->group(function () {
 	Route::post('store', 'App\Http\Controllers\API\PublisherController@store')->name('publisher.store');
 	Route::get('delete/{id}', 'App\Http\Controllers\API\PublisherController@destroy')->name('publisher.delete');
 });
+
+//submission 
+Route::prefix('submission')->group(function () {
+	Route::post('store', 'App\Http\Controllers\API\SubmissionController@store')->name('submission.store');
+	Route::get('delete/{id}', 'App\Http\Controllers\API\SubmissionController@destroy')->name('submission.delete');
+});

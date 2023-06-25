@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->decimal('FeePaid')->nullable();
             $table->decimal('PayReceived')->nullable();
             $table->string('Notes')->nullable();
-            $table->json('Custom');
+            $table->json('Custom')->nullable();
 
             $table->unsignedBigInteger('user_ID)')->nullable();
             $table->foreign('user_ID)')->references('id')->on('users');

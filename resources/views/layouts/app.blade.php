@@ -136,9 +136,9 @@
 
 
     </div>
-    @include('modal.submission')
+
     @include('modal.setting')
-    @include('modal.editSubmission')
+    
     
   
 </body>
