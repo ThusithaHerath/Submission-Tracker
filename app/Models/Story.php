@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\StoryType;
 use App\Models\StoryCompletionStatus;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Story extends Model
 {
@@ -21,12 +22,14 @@ class Story extends Model
         'StoryType_ID'
     ];
 
-    public function sstatus(){
-        return $this->belongsTo(StoryCompletionStatus::class,'StoryStatus_ID');
+
+    public function story_status(): BelongsTo
+    {
+        return $this->belongsTo(StoryCompletionStatus::class );
     }
 
-    public function sstype(){
-        return $this->belongsTo(StoryType::class,'StoryType_ID');
+    public function story_type(): BelongsTo
+    {
+        return $this->belongsTo(StoryType::class);
     }
-
 }

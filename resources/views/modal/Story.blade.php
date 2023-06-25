@@ -83,6 +83,7 @@
                                                           </div>
                                                           <div class="d-flex justify-content-end mt-3">
                                                               <div class="text-center"><button type="submit"
+                                                                      onclick="event.preventDefault()"
                                                                       class="bg-transparent border me-3"data-bs-dismiss="modal">Cancel</button>
                                                               </div>
                                                               <button type="submit">Save</button>

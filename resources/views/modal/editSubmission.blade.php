@@ -284,6 +284,7 @@
                                     </div>
                                     <div class="d-flex justify-content-end mt-3">
                                         <div class="text-center" data-bs-dismiss="modal"><button type="submit"
+                                                onclick="event.preventDefault()"
                                                 class="bg-transparent border me-3">Cancel</button></div>
                                         <div class="text-center"><button type="submit">Save</button></div>
                                     </div>
