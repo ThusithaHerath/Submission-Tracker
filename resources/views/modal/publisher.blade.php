@@ -39,7 +39,8 @@
                                                                   style="width:200px!important" name="type">
                                                                   <option value="N/A">N/A</option>
                                                                   @foreach ($type as $type)
-                                                                      <option value="{{ $type->id }}">{{ $type->PublisherType_Name }}</option>
+                                                                      <option value="{{ $type->id }}">
+                                                                          {{ $type->PublisherType_Name }}</option>
                                                                   @endforeach
                                                               </select>
 
@@ -55,10 +56,10 @@
                                                               <select class="single-select-publishernew" multiple
                                                                   style="width:150px!important;"
                                                                   name="simultaneoussubmission">
-                                                                  <option value="Unknown">Unknown</option>
-                                                                  <option value="Yes">Yes</option>
-                                                                  <option value="No">No</option>
-                                                                  <option value="Show All">Show All</option>
+                                                                  <option value="0">Unknown</option>
+                                                                  <option value="1">Yes</option>
+                                                                  <option value="2">No</option>
+                                                                  <option value="3">Show All</option>
                                                               </select>
                                                           </div>
                                                           <div class="form-group col-3 mt-4">
