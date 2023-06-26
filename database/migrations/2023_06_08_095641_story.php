@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->integer('Lines')->nullable();
             $table->integer('Words')->nullable();
             $table->string('Summary')->nullable();
+            $table->string('IsLock')->default('1');
             $table->unsignedBigInteger('StoryStatus_ID')->nullable();
             $table->foreign('StoryStatus_ID')->references('id')->on('story_completion_status');
             $table->unsignedBigInteger('StoryType_ID')->nullable();

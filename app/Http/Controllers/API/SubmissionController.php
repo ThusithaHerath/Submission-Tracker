@@ -18,7 +18,7 @@ class SubmissionController extends Controller
     {
         $submission_status = SubmissionStatus::all();
         $submission = Submission::all();
-        $story = Story::all();
+        $story = Story::where('isLock', '=', '0')->get();
         $publisher = Publisher::all();
        
         return view('categories.submissions.submission',compact('submission_status','submission','story','publisher'));
@@ -68,5 +68,10 @@ class SubmissionController extends Controller
 		}else{
             return redirect()->back()->with('submission_not_found','Sorry! Submission not found!');
         }
+    }
+
+    public function submissions(){
+        $submissions = Submission::all();
+        return view ('submissions',compact('submissions'));
     }
 }

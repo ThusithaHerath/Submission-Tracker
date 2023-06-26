@@ -59,14 +59,15 @@
                                     <span class="p-3">Summary</span>
                                 </div>
                             </th>
+                            <th scope="col"class="pb-3 pe-3"> <span>Lock/Unlock</span></th>
                             <th scope="col"class="pb-3 pe-3"> <span>Action</span></th>
                         </tr>
                     </thead>
                     @foreach ($story as $story)
                         <tr scope="row " class="fs-6">
                             <td class="text-center data-1">
-                                <a class="fa fa-trash" href="{{ url('api/story/delete/' . $story->Story_ID) }}"></a>
-                                <input type="text" value="{{ $story->Story_ID }}" class="data-id" hidden>
+                                <a class="fa fa-trash" href="{{ url('api/story/delete/' . $story->id) }}"></a>
+                                <input type="text" value="{{ $story->id }}" class="data-id" hidden>
 
                             </td>
 
@@ -77,6 +78,13 @@
                             <td class="data-lines">{{ $story->Lines }}</td>
                             <td class="data-words">{{ $story->Words }}</td>
                             <td class="data-summary">{{ $story->Summary }}</td>
+                            <td class="text-center editBtnStory data-7">
+                                @if ($story->IsLock == '1')
+                                <a class="fa fa-lock" style="color:red" href="{{ url('api/story/unlock/'.$story->id) }}"></a>
+                                @else
+                                <a class="fa fa-unlock" href="{{ url('api/story/lock/'.$story->id) }}"></a>
+                                @endif 
+                            </td>
                             <td class="text-center editBtnStory data-7" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"> <i class="fa fa-pencil"></i>
                             </td>

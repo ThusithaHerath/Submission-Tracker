@@ -43,7 +43,7 @@ class StoryController extends Controller
     public function update(Request $request)
     {
        
-        Story::where('Story_ID', $request->story_id)
+        Story::where('id', $request->story_id)
             ->update([
                 'Story_Name' => $request->editStory,
                 'Lines' => $request->editLines,
@@ -70,6 +70,25 @@ class StoryController extends Controller
         } else {
             return redirect()->back()->with('story_not_found', 'Sorry! Story not found!');
         }
+    }
+
+    public function lock($id){
+        Story::where('id', $id)
+        ->update([
+            'IsLock' => '1',
+        ]);
+
+        return redirect()->back()->with('story_locked', 'Story has succefully locked!');
+    }
+
+    public function unlock($id){
+        
+        Story::where('id', $id)
+        ->update([
+            'IsLock' => '0',
+        ]);
+
+        return redirect()->back()->with('story_unlocked', 'Story has succefully unlocked!');
     }
 
 }

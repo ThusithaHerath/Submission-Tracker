@@ -27,6 +27,8 @@ Route::prefix('story')->group(function () {
 	Route::post('store', 'App\Http\Controllers\API\StoryController@store')->name('story.store');
 	Route::get('delete/{id}', 'App\Http\Controllers\API\StoryController@destroy')->name('story.delete');
 	Route::post('update', 'App\Http\Controllers\API\StoryController@update')->name('story.update');
+	Route::get('unlock/{id}', 'App\Http\Controllers\API\StoryController@unlock')->name('story.unlock');
+	Route::get('lock/{id}', 'App\Http\Controllers\API\StoryController@lock')->name('story.lock');
 });
 
 //publisher 

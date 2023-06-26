@@ -73,6 +73,7 @@
                         @endif
 
 
+                        <a type="button" class="book-a-table-btn btn d-lg-flex h-100 me-4" href="{{ url('/submissions') }}">Submission Totals</a>
 
                         <a class="fa fa-home fs-3  mt-1 me-4 " href="{{ url('/home') }}" style="cursor: pointer"></a>
                         <i class="fa fa-cog fs-3  mt-1 me-4 " data-bs-toggle="modal" data-bs-target="#setting"
