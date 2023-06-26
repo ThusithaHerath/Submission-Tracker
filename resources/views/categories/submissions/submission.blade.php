@@ -59,25 +59,28 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                               @foreach ($submission as $submission)
-                               <tr scope="row " class="fs-6">
-                                <td class="text-center data-1 delete-row">
-                                    <a class="fa fa-trash" href="{{url('api/submission/delete/'.$submission->id)}}"></a>
-                                </td>
-                                <td class="data-dateSubmit">{{$submission->SubmissionDate}}</td>
-                                <td class="data-locked">N/A</td>
-                                <td class="data-story">{{$submission->Story_ID}}</td>
-                                <td class="data-publisher">{{$submission->Publisher_ID}}</td>
-                                <td class="data-status">{{$submission->SubmissionStatus_ID}}</td>
-                                <td class="data-notes">{{$submission->Notes}}</td>
-                                <td class="data-pay">{{$submission->FeePaid}}</td>
+                                    @foreach ($submission as $submission)
+                                        <tr scope="row " class="fs-6">
+                                            <td class="text-center data-1 delete-row">
+                                                <input type="text" value="{{ $submission->id }}"
+                                                    class="data-submission-id" hidden>
+                                                <a class="fa fa-trash"
+                                                    href="{{ url('api/submission/delete/' . $submission->id) }}"></a>
+                                            </td>
+                                            <td class="data-dateSubmit">{{ $submission->SubmissionDate }}</td>
+                                            <td class="data-locked">N/A</td>
+                                            <td class="data-story">{{ $submission->Story_ID }}</td>
+                                            <td class="data-publisher">{{ $submission->Publisher_ID }}</td>
+                                            <td class="data-status">{{ $submission->SubmissionStatus_ID }}</td>
+                                            <td class="data-notes">{{ $submission->Notes }}</td>
+                                            <td class="data-pay">{{ $submission->FeePaid }}</td>
 
-                                <td class="text-center editBtnSubmission data-7" data-bs-toggle="modal"
-                                    data-bs-target="#editSubmissionModal">
-                                    <i class="fa fa-pencil"></i>
-                                </td>
-                                </tr>
-                               @endforeach
+                                            <td class="text-center editBtnSubmission data-7" data-bs-toggle="modal"
+                                                data-bs-target="#editSubmissionModal">
+                                                <i class="fa fa-pencil"></i>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
 
@@ -86,5 +89,15 @@
     </section>
 @endsection
 
-@include('modal.submission', ['submission_status' => $submission_status,'submission'=>$submission,'story'=>$story,'publisher'=>$publisher])
-@include('modal.editSubmission', ['submission_status' => $submission_status,'submission'=>$submission,'story'=>$story,'publisher'=>$publisher])
+@include('modal.submission', [
+    'submission_status' => $submission_status,
+    'submission' => $submission,
+    'story' => $story,
+    'publisher' => $publisher,
+])
+@include('modal.editSubmission', [
+    'submission_status' => $submission_status,
+    'submission' => $submission,
+    'story' => $story,
+    'publisher' => $publisher,
+])

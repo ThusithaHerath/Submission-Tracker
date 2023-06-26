@@ -13,7 +13,8 @@
 
                 <section id="testimonials" class="testimonials section-bg pb-0">
                     <form action="{{ url('http://127.0.0.1:8000/api/submission/store') }}"method="POST"
-                        enctype="multipart/form-data">
+                        enctype="multipart/form-data" role="form" class="php-email-form" data-aos="fade-up"
+                        data-aos-delay="100">
                         @csrf
                         <div class="container" data-aos="fade-up">
 
@@ -192,7 +193,7 @@
 
                             <section id="book-a-table" class="book-a-table">
                                 <div class="container" data-aos="fade-up">
-                                    <div class="row">
+                                    <div class="row php-email-form">
                                         <div class="col-lg-2 col-md-2 form-group">
                                             <label for="" class="form-label">Submission Status</label>
                                             <select class="single-select-submission" multiple
@@ -225,14 +226,14 @@
 
                                             </div>
                                         </div>
+                                        <div class="d-flex justify-content-end mt-3">
+                                            <div class="text-center"data-bs-dismiss="modal"><button type="submit"
+                                                    onclick="event.preventDefault()"
+                                                    class="bg-transparent border me-3">Cancel</button></div>
+                                            <div class="text-center"><button type="submit">Save</button></div>
+                                        </div>
+                                    </div>
 
-                                    </div>
-                                    <div class="d-flex justify-content-end mt-3">
-                                        <div class="text-center"data-bs-dismiss="modal"><button type="submit"
-                                                onclick="event.preventDefault()"
-                                                class="bg-transparent border me-3">Cancel</button></div>
-                                        <div class="text-center"><button type="submit">Save</button></div>
-                                    </div>
 
                                 </div>
                             </section>

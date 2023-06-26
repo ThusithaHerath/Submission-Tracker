@@ -42,6 +42,7 @@ Route::prefix('publisher')->group(function () {
 Route::prefix('submission')->group(function () {
 	Route::post('store', 'App\Http\Controllers\API\SubmissionController@store')->name('submission.store');
 	Route::get('delete/{id}', 'App\Http\Controllers\API\SubmissionController@destroy')->name('submission.delete');
+	Route::post('update', 'App\Http\Controllers\API\SubmissionController@update')->name('submission.update');
 });
 
 //settings

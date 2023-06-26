@@ -45,12 +45,18 @@ $(".editBtnPublisher").click(function () {
 
 $(".editBtnSubmission").click(function () {
   //FINDING ELEMENTS OF ROWS AND STORING THEM IN VARIABLES
+  var data_id = $(this)
+    .parents("tr")
+    .children()
+    .children(".data-submission-id")
+    .val();
   var data_status = $(this).parents("tr").find(".data-status").text();
   var data_dateSubmit = $(this).parents("tr").find(".data-dateSubmit").text();
   var data_pay = $(this).parents("tr").find(".data-pay").text();
   var data_notes = $(this).parents("tr").find(".data-notes").text();
 
   // CREATING DATA TO SHOW ON MODEL
+  $("#data_submission__id").val(data_id);
   $("#data___status").val(data_status).trigger("change");
   $("#data___dateSubmit").val(data_dateSubmit);
   $("#data___pay").val(data_pay);
