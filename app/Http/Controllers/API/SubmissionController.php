@@ -20,6 +20,7 @@ class SubmissionController extends Controller
         $submission = Submission::all();
         $story = Story::all();
         $publisher = Publisher::all();
+       
         return view('categories.submissions.submission',compact('submission_status','submission','story','publisher'));
     }
 
@@ -38,6 +39,24 @@ class SubmissionController extends Controller
         return redirect()->back()->with('submission_added','New Submission has been added!');
     }
 
+
+    public function update(Request $request)
+    {
+    //    dd($request);
+        Submission::where('id', $request->submission_id)
+            ->update([
+                'Story_ID' => $request->story,
+                'Publisher_ID' => $request->publisher,
+                'SubmissionStatus_ID' => $request->submission_status,
+                'SubmissionDate' => $request->submission,
+                'FeePaid' => $request->pay,
+                'Notes' => $request->note,
+            ]);
+
+            return redirect()->back()->with('submission_updated', 'Submission has succefully updated!');
+    }
+
+    
     public function destroy(Request $request, $id){
 
         if (Submission::where('id','=', $id)->exists()) {
