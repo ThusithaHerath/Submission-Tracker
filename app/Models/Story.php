@@ -23,13 +23,13 @@ class Story extends Model
     ];
 
 
-    public function story_status(): BelongsTo
+    public function storyStatus()
     {
-        return $this->belongsTo(StoryCompletionStatus::class );
+        return $this->belongsTo(StoryCompletionStatus::class,'StoryStatus_ID' );
     }
 
-    public function story_type(): BelongsTo
+    public function storyType()
     {
-        return $this->belongsTo(StoryType::class);
+        return $this->belongsTo(StoryType::class,'StoryType_ID');
     }
 }

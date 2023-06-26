@@ -72,10 +72,8 @@
 
                             <td class="data-2">N/A</td>
                             <td class="data-story">{{ $story->Story_Name }}</td>
-                            <td class="data-status">{{ $story->Story_Name }}</td>
-                            <td class="data-type">{{ $story->Story_Name }}</td>
-                            {{-- <td class="data-3">{{$story->sstatus->StoryCompletionStatus_ID}}</td>
-                            <td class="data-4">{{$story->sstype->StoryType_Name}}</td> --}}
+                            <td class="data-3">{{$story->storyStatus->StoryCompletionStatus_Name}}</td>
+                            <td class="data-4">{{$story->storyType->StoryType_Name}}</td>
                             <td class="data-lines">{{ $story->Lines }}</td>
                             <td class="data-words">{{ $story->Words }}</td>
                             <td class="data-summary">{{ $story->Summary }}</td>

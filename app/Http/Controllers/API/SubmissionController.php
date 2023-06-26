@@ -8,6 +8,9 @@ use App\Models\SubmissionStatus;
 use App\Models\Submission;
 use App\Models\Story;
 use App\Models\Publisher;
+use Illuminate\Support\Facades\Auth;
+
+
 
 class SubmissionController extends Controller
 {
@@ -21,9 +24,10 @@ class SubmissionController extends Controller
     }
 
     public function store(Request $request){
-        
+
         $submission = new Submission();
         $submission->SubmissionStatus_ID = $request->input('status');
+        $submission->user_ID = $request->input('user');
         $submission->SubmissionDate = $request->input('submission');
         $submission->FeePaid = $request->input('pay');
         $submission->Notes = $request->input('note');

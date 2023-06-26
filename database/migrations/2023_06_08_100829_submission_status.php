@@ -13,7 +13,7 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('submission_status', function (Blueprint $table) {
-            $table->id('SubmissionStatus_ID');
+            $table->id();
             $table->string('SubmissionStatus_Name');
             $table->string('SubmissionStatusLocksStory')->nullable();
             $table->timestamps();

@@ -41,7 +41,7 @@
                                                                       <option value="N/A">N/A</option>
                                                                       @foreach ($story_status as $status)
                                                                           <option
-                                                                              value="{{ $status->StoryCompletionStatus_ID }}">
+                                                                              value="{{ $status->id }}">
                                                                               {{ $status->StoryCompletionStatus_Name }}
                                                                           </option>
                                                                       @endforeach
@@ -53,7 +53,7 @@
                                                                       name="type" style="width:150px!important">
                                                                       <option value="N/A">N/A</option>
                                                                       @foreach ($story_type as $type)
-                                                                          <option value="{{ $type->StoryType_ID }}">
+                                                                          <option value="{{ $type->id }}">
                                                                               {{ $type->StoryType_Name }}</option>
                                                                       @endforeach
                                                                   </select>

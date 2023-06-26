@@ -78,7 +78,7 @@
                                             hidden>
                                     </td>
                                     <td class="data-publisher">{{ $publisher->Publisher }}</td>
-                                    <td class="data-type">{{ $publisher->publisher_type_id }}</td>
+                                    <td class="data-type">{{ $publisher->publisherType->PublisherType_Name }}</td>
                                     <td class="data-submission">
                                         @if ($publisher->SimultaneousSubmissionAllowed == '1')
                                             Yes

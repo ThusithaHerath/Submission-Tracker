@@ -13,7 +13,7 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('submission_method', function (Blueprint $table) {
-            $table->id('SubmissionMethod_ID');
+            $table->id();
             $table->enum('SubmissionMethod_Name', [
                 'PublisherWebsite',
                 'Submissions',

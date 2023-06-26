@@ -19,9 +19,9 @@ return new class extends Migration {
             $table->integer('Words')->nullable();
             $table->string('Summary')->nullable();
             $table->unsignedBigInteger('StoryStatus_ID')->nullable();
-            $table->foreign('StoryStatus_ID')->references('StoryCompletionStatus_ID')->on('story_completion_status');
+            $table->foreign('StoryStatus_ID')->references('id')->on('story_completion_status');
             $table->unsignedBigInteger('StoryType_ID')->nullable();
-            $table->foreign('StoryType_ID')->references('StoryType_ID')->on('story_type');
+            $table->foreign('StoryType_ID')->references('id')->on('story_type');
             $table->timestamps();
         });
 

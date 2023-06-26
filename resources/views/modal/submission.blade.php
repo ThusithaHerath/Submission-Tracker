@@ -17,101 +17,6 @@
                         @csrf
                         <div class="container" data-aos="fade-up">
 
-                            {{-- <div class="testimonials-slider swiper mb-3" data-aos="fade-up" data-aos-delay="100">
-                                <div class="d-flex row">
-                                    <div class="col-6">
-                                        <div class="section-title mb-4 p-0 mt-1">
-                                            <h2>Filter Stories For Selection</h2>
-                                        </div>
-                                        <div class="testimonial-item p-4 rounded-3" style="background-color: #26231d">
-    
-                                            <section id="book-a-table" class="book-a-table p-0">
-                                                <div class="container" data-aos="fade-up">
-                                                    <form action=" " role="form" class="php-email-form"
-                                                        data-aos="fade-up" data-aos-delay="100">
-                                                        <div class="d-flex">
-                                                            <div class="form-group me-5">
-                                                                <label for="" class="form-label">Story</label>
-                                                                <input type="text" name="Story" class="form-control"
-                                                                    id="Story">
-    
-                                                            </div>
-                                                            <div class="form-group me-2 p-0">
-                                                                <label for="" class="form-label">Type</label>
-                                                                <select class="multi-select-submission" multiple
-                                                                    style="width:200px!important">
-                                                                    <option value="AL">Alabama</option>
-                                                                    <option value="WY">Wyoming</option>
-                                                                </select>
-    
-                                                            </div>
-    
-    
-                                                        </div>
-    
-                                                    </form>
-                                                </div>
-                                            </section>
-    
-    
-    
-                                        </div>
-                                    </div>
-    
-                                    <div class="col-6">
-                                        <div class="section-title mb-4 p-0 mt-1">
-                                            <h2>Filter Publishers For Selection</h2>
-                                        </div>
-                                        <div class="testimonial-item p-4 rounded-3" style="background-color: #26231d">
-    
-                                            <section id="book-a-table" class="book-a-table p-0">
-                                                <div class="container" data-aos="fade-up">
-                                                    <form action=" " role="form" class="php-email-form"
-                                                        data-aos="fade-up" data-aos-delay="100">
-                                                        <div class="d-flex">
-                                                            <div class="form-group me-2 p-0">
-                                                                <label for="" class="form-label">Story</label>
-                                                                <input type="text" name="Story" class="form-control"
-                                                                    id="Story">
-    
-                                                            </div>
-                                                            <div class="form-group me-2 p-0">
-                                                                <label for="" class="form-label">Type</label>
-                                                                <select class="multi-select-submission" multiple
-                                                                    style="width:150px!important">
-                                                                    <option value="AL">Alabama</option>
-                                                                    <option value="WY">Wyoming</option>
-                                                                </select>
-    
-                                                            </div>
-    
-                                                            <div class="form-group p-0">
-                                                                <label for="" class="form-label"
-                                                                    style="font-size:13.7px">Simultsneous
-                                                                    Submission OK?</label>
-                                                                <select class="single-select-submission" multiple
-                                                                    style="width:150px!important;">
-                                                                    <option value="yes">Yes</option>
-                                                                    <option value="no">No</option>
-                                                                    <option value="all">Show All</option>
-                                                                </select>
-    
-                                                            </div>
-                                                        </div>
-    
-                                                    </form>
-                                                </div>
-                                            </section>
-    
-    
-    
-                                        </div>
-                                    </div>
-    
-    
-                                </div>
-                            </div> --}}
-
                             <div class="d-flex justify-content-around section-title p-1"
                                 style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                                 <p>Submission</p>
@@ -198,7 +103,7 @@
                                             <select class="single-select-submission" multiple
                                                 style="width:150px!important;" name="status" required>
                                                 @foreach ($submission_status as $status)
-                                                    <option value="{{ $status->SubmissionStatus_ID }}">
+                                                    <option value="{{ $status->id }}">
                                                         {{ $status->SubmissionStatus_Name }}</option>
                                                 @endforeach
                                             </select>
@@ -215,6 +120,8 @@
                                             <input type="number" name="pay" class="form-control" placeholder="Pay"
                                                 data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
 
+                                            <input type="number" name="user" value="{{Auth::User()->id}}"
+                                             hidden>
                                         </div>
 
                                         <div class="col-6">

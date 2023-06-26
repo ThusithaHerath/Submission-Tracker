@@ -13,7 +13,7 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('story_type', function (Blueprint $table) {
-            $table->id('StoryType_ID');
+            $table->id();
             $table->string('StoryType_Name');
             $table->timestamps();
         });

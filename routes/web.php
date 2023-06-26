@@ -23,9 +23,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/category/stories', [StoryController::class, 'index'])->name('category.stories');
-Route::get('/category/submissions', [SubmissionController::class, 'index'])->name('category.submissions');
-Route::get('/category/publishers', [PublisherController::class, 'index'])->name('category.publishers');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/category/stories', [StoryController::class, 'index'])->name('category.stories')->middleware('auth');
+Route::get('/category/submissions', [SubmissionController::class, 'index'])->name('category.submissions')->middleware('auth');
+Route::get('/category/publishers', [PublisherController::class, 'index'])->name('category.publishers')->middleware('auth');
 
 

@@ -20,8 +20,8 @@ return new class extends Migration {
             $table->string('Notes')->nullable();
             $table->json('Custom')->nullable();
 
-            $table->unsignedBigInteger('user_ID)')->nullable();
-            $table->foreign('user_ID)')->references('id')->on('users');
+            $table->unsignedBigInteger('user_ID')->nullable();
+            $table->foreign('user_ID')->references('id')->on('users');
 
             $table->unsignedBigInteger('Story_ID')->nullable();
             $table->foreign('Story_ID')->references('id')->on('story');
@@ -30,10 +30,10 @@ return new class extends Migration {
             $table->foreign('Publisher_ID')->references('id')->on('publishers');
 
             $table->unsignedBigInteger('SubmissionMethod_ID')->nullable();
-            $table->foreign('SubmissionMethod_ID')->references('SubmissionMethod_ID')->on('submission_method');
+            $table->foreign('SubmissionMethod_ID')->references('id')->on('submission_method');
 
             $table->unsignedBigInteger('SubmissionStatus_ID')->nullable();
-            $table->foreign('SubmissionStatus_ID')->references('SubmissionStatus_ID')->on('submission_status');
+            $table->foreign('SubmissionStatus_ID')->references('id')->on('submission_status');
 
             $table->timestamps();
         });

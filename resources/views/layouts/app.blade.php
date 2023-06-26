@@ -74,7 +74,7 @@
 
 
 
-
+                        <a class="fa fa-home fs-3  mt-1 me-4 " href="{{url('/home')}}" style="cursor: pointer"></a>
                         <i class="fa fa-cog fs-3  mt-1 me-4 " data-bs-toggle="modal" data-bs-target="#setting"
                             style="cursor: pointer"></i>
                         <i class="fa fa-question-circle fs-3  mt-1  me-4" style="cursor: pointer"></i>
