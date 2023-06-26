@@ -22,6 +22,7 @@ $(document).ready(function () {
 
   $(".setting-multiple").select2({
     dropdownParent: $("#setting"),
+    maximumSelectionLength: 1,
     width: "resolve",
   });
 

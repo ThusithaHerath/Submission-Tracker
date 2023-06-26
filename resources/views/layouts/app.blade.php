@@ -74,7 +74,7 @@
 
 
 
-                        <a class="fa fa-home fs-3  mt-1 me-4 " href="{{url('/home')}}" style="cursor: pointer"></a>
+                        <a class="fa fa-home fs-3  mt-1 me-4 " href="{{ url('/home') }}" style="cursor: pointer"></a>
                         <i class="fa fa-cog fs-3  mt-1 me-4 " data-bs-toggle="modal" data-bs-target="#setting"
                             style="cursor: pointer"></i>
                         <i class="fa fa-question-circle fs-3  mt-1  me-4" style="cursor: pointer"></i>
@@ -138,9 +138,9 @@
     </div>
 
     @include('modal.setting')
-    
-    
-  
+
+
+
 </body>
 
 <!-- Vendor JS Files -->
@@ -165,6 +165,7 @@
 <script src="{{ asset('js/table.js') }}"></script>
 <script src="{{ asset('js/login.js') }}"></script>
 <script src="{{ asset('js/editModal.js') }}"></script>
+<script src="{{ asset('js/setting.js') }}"></script>
 
 
 </html>
