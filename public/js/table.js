@@ -1,10 +1,44 @@
 $(document).ready(function () {
-  $("#custom-table").dataTable({
-    // aoColumnDefs: [
-    //   { bSortable: false, aTargets: [5, 1, 2, 3, 4] },
-    //   //   { bSearchable: false, aTargets: [0, 1, 2, 3, 4, 5] },
-    // ],
+  $("#custom-table").dataTable({});
+
+  //submission total inner table start
+  $("#inner-table").DataTable({
+    searching: false,
+    autoWidth: true,
+    footerCallback: function (row, data, start, end, display) {
+      var api = this.api();
+      nb_cols = api.columns().nodes().length;
+      var j = 2;
+      while (j < nb_cols) {
+        var pageTotal = api
+          .column(j, { page: "current" })
+          .data()
+          .reduce(function (a, b) {
+            return Number(a) + Number(b);
+          }, 0);
+        // Update footer
+        $(api.column(j).footer()).html(pageTotal);
+        j++;
+      }
+      var j = 3;
+      while (j < nb_cols) {
+        var pageTotal = api
+          .column(j, { page: "current" })
+          .data()
+          .reduce(function (a, b) {
+            return Number(a) + Number(b);
+          }, 0);
+        // Update footer
+        $(api.column(j).footer()).html(pageTotal);
+        j++;
+      }
+    },
   });
+
+  $("#totalLinesCopy").val($("#totalLines").text());
+  $("#totalWordsCopy").val($("#totalWords").text());
+
+  //submission total inner table end
 
   $(".submision_table").dataTable({
     aoColumnDefs: [{ bSortable: false, aTargets: [0] }],
