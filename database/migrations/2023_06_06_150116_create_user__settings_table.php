@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user__settings', function (Blueprint $table) {
+        Schema::create('user__setting', function (Blueprint $table) {
             $table->id();
             $table->string('UserSettingValue_Value');
             $table->string('UserFlexibleSetting_ID');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user__settings');
+        Schema::dropIfExists('user__setting');
     }
 };

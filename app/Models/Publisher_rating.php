@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PublisherType extends Model
+class Publisher_rating extends Model
 {
     use HasFactory;
-    protected $table = 'publisher_type';
-
     protected $fillable = [
-        'PublisherType_Name',
+        'publisher_rating_name',
+        'publisher_rating_rank',
     ];
 }

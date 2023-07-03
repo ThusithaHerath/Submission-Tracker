@@ -12,7 +12,7 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('submissions', function (Blueprint $table) {
+        Schema::create('submission', function (Blueprint $table) {
             $table->id();
             $table->string('SubmissionDate')->nullable();
             $table->decimal('FeePaid')->nullable();
@@ -27,7 +27,7 @@ return new class extends Migration {
             $table->foreign('Story_ID')->references('id')->on('story');
 
             $table->unsignedBigInteger('Publisher_ID')->nullable();
-            $table->foreign('Publisher_ID')->references('id')->on('publishers');
+            $table->foreign('Publisher_ID')->references('id')->on('publisher');
 
             $table->unsignedBigInteger('SubmissionMethod_ID')->nullable();
             $table->foreign('SubmissionMethod_ID')->references('id')->on('submission_method');
@@ -47,6 +47,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('submissions');
+        Schema::dropIfExists('submission');
     }
 };

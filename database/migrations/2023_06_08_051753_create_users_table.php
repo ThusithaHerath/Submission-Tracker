@@ -25,14 +25,14 @@ return new class extends Migration
             $table->string('zip');
             $table->date('lisense_date');
             $table->string('permission');
-            $table->timestamp('date_last_login');
+            $table->timestamp('timestamp_last_login');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->unsignedBigInteger('license_id')->nullable();
-            $table->foreign('license_id')->references('id')->on('license_types');
+            $table->foreign('license_id')->references('id')->on('license_type');
             $table->unsignedBigInteger('setting')->nullable();
-            $table->foreign('setting')->references('id')->on('user__settings');
+            $table->foreign('setting')->references('id')->on('user__setting');
             $table->rememberToken();
             $table->timestamps();
         });

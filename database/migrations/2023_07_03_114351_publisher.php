@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('publishers', function (Blueprint $table) {
+        Schema::create('publisher', function (Blueprint $table) {
             $table->id();
             $table->string('Publisher');
             $table->string('SimultaneousSubmissionAllowed');
@@ -29,9 +29,9 @@ return new class extends Migration
             $table->string('DeadlineInfo')->nullable();
             $table->json('Custom')->nullable();
             $table->unsignedBigInteger('publisher_deadline_id')->nullable();
-            $table->foreign('publisher_deadline_id')->references('id')->on('publisher_deadlines');
+            $table->foreign('publisher_deadline_id')->references('id')->on('publisher_deadline');
             $table->unsignedBigInteger('publisher_type_id')->nullable();
-            $table->foreign('publisher_type_id')->references('id')->on('publisher_types');
+            $table->foreign('publisher_type_id')->references('id')->on('publisher_type');
             $table->timestamps();
         });
     }
@@ -43,6 +43,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publishers');
+        Schema::dropIfExists('publisher');
     }
 };

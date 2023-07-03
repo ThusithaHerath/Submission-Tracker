@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('publisher_deadlines', function (Blueprint $table) {
+        Schema::create('publisher_deadline', function (Blueprint $table) {
             $table->id();
             $table->string('PublisherDeadlineWarning_Color');
             $table->string('PublisherDeadlineWarning_Message');
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publisher_deadlines');
+        Schema::dropIfExists('publisher_deadline');
     }
 };

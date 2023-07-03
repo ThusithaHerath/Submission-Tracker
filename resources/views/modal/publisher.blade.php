@@ -56,15 +56,20 @@
                                                               <select class="single-select-publishernew" multiple
                                                                   style="width:150px!important;"
                                                                   name="simultaneoussubmission">
-                                                                  <option value="0">Unknown</option>
                                                                   <option value="1">Yes</option>
                                                                   <option value="2">No</option>
-                                                                  <option value="3">Show All</option>
                                                               </select>
                                                           </div>
                                                           <div class="form-group col-3 mt-4">
                                                               <label for="" class="form-label">Rank</label>
-                                                              <input type="number" class="form-control" name="rank">
+                                                              <select class="single-select-publishernew" multiple
+                                                                  style="width:150px!important" name="rank">
+                                                                  <option value="N/A">N/A</option>
+                                                                  @foreach ($rating as $rating)
+                                                                      <option value="{{ $rating->id }}">
+                                                                          {{ $rating->publisher_rating_name }}</option>
+                                                                  @endforeach
+                                                              </select>
                                                           </div>
                                                           <div class="form-group col-3 mt-4">
                                                               <label for="" class="form-label">Deadline</label>

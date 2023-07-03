@@ -13,15 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('license_type', function (Blueprint $table) {
+        Schema::create('publisher_ratings', function (Blueprint $table) {
             $table->id();
-            $table->string('LicenseType_Name');
-            $table->integer('DaysDuration');
-            $table->integer('DaysAfterExpirationToDeleteUser');
-            $table->integer('MaxStories');
-            $table->integer('MaxPublishers');
-            $table->integer('MaxSubmissions');
-            $table->decimal('License_Price');
+            $table->string('publisher_rating_name');
+            $table->integer('publisher_rating_rank');
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('license_type');
+        Schema::dropIfExists('publisher_ratings');
     }
 };

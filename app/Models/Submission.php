@@ -13,6 +13,7 @@ use App\Models\SubmissionMethod;
 class Submission extends Model
 {
     use HasFactory;
+    protected $table = 'submission';
     protected $fillable = [
         'SubmissionDate',
         'FeePaid',

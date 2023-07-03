@@ -16,11 +16,10 @@ return new class extends Migration {
             $table->id();
             $table->enum('SubmissionMethod_Name', [
                 'PublisherWebsite',
-                'Submissions',
-                'com',
-                'email',
-                'fax',
-                'mail'
+                'Submissions.com',
+                'Email',
+                'Mail',
+                'Fax',
             ])->default('mail')->nullable();
             $table->timestamps();
         });

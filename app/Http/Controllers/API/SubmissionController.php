@@ -35,6 +35,20 @@ class SubmissionController extends Controller
         $submission->Story_ID = $request->input('story');
         $submission->Publisher_ID = $request->input('publisher');
         $submission->save();
+        
+        $story_id = $request->input('story');
+        $publisher_id = $request->input('publisher');
+        $storyStatus = SubmissionStatus::select('SubmissionStatusLocksStory')->where('id',$story_id)->first();
+        $Publisher_status = Publisher::select('SimultaneousSubmissionAllowed')->where('id',$publisher_id)->first();
+
+       
+        if($Publisher_status->SimultaneousSubmissionAllowed == '2' &&  $storyStatus->SubmissionStatusLocksStory == 'True'){
+
+            Story::where('id', $story_id)
+            ->update([
+                'IsLock' => '1',
+            ]);
+        }
 
         return redirect()->back()->with('submission_added','New Submission has been added!');
     }

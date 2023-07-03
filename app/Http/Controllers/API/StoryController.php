@@ -72,23 +72,20 @@ class StoryController extends Controller
         }
     }
 
-    public function lock($id){
-        Story::where('id', $id)
-        ->update([
-            'IsLock' => '1',
-        ]);
+    // public function lock($id){
+       
 
-        return redirect()->back()->with('story_locked', 'Story has succefully locked!');
-    }
+    //     return redirect()->back()->with('story_locked', 'Story has succefully locked!');
+    // }
 
-    public function unlock($id){
+    // public function unlock($id){
         
-        Story::where('id', $id)
-        ->update([
-            'IsLock' => '0',
-        ]);
+    //     Story::where('id', $id)
+    //     ->update([
+    //         'IsLock' => '0',
+    //     ]);
 
-        return redirect()->back()->with('story_unlocked', 'Story has succefully unlocked!');
-    }
+    //     return redirect()->back()->with('story_unlocked', 'Story has succefully unlocked!');
+    // }
 
 }

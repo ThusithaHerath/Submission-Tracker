@@ -109,5 +109,5 @@
             </div>
     </section>
 @endsection
-@include('modal.Publisher', ['publisher' => $publisher, 'type' => $type])
-@include('modal.editPublisher', ['type' => $type, 'publisher' => $publisher])
+@include('modal.Publisher', ['publisher' => $publisher, 'type' => $type, 'rating' => $rating])
+@include('modal.editPublisher', ['type' => $type, 'publisher' => $publisher, 'rating' => $rating])

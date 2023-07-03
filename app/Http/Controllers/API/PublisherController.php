@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\PublisherType;
 use App\Models\Publisher;
+use App\Models\Publisher_rating;
 
 class PublisherController extends Controller
 {
@@ -13,8 +14,9 @@ class PublisherController extends Controller
     {
         $publisher = Publisher::all();
         $type = PublisherType::all();
+        $rating = Publisher_rating::all();
       
-        return view('categories.publishers.publisher',compact('type','publisher'));
+        return view('categories.publishers.publisher',compact('type','publisher','rating'));
         
     }
 
