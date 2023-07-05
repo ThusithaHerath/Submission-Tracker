@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('publisher_rating_name');
             $table->integer('publisher_rating_rank');
+            $table->unsignedBigInteger('user_ID')->nullable();
+            $table->foreign('user_ID')->references('id')->on('users');
             $table->timestamps();
         });
     }

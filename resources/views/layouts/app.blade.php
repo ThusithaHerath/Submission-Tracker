@@ -77,8 +77,10 @@
                             href="{{ url('/submissions/total') }}">Submission Totals</a>
 
                         <a class="fa fa-home fs-3  mt-1 me-4 " href="{{ url('/home') }}" style="cursor: pointer"></a>
+                        @if(Auth::User()->isAdmin)
                         <i class="fa fa-cog fs-3  mt-1 me-4 " data-bs-toggle="modal" data-bs-target="#setting"
                             style="cursor: pointer"></i>
+                        @endif
                         <i class="fa fa-question-circle fs-3  mt-1  me-4" style="cursor: pointer"></i>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf

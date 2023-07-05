@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('zip');
             $table->date('lisense_date');
             $table->string('permission');
+            $table->string('isAdmin')->default(false);
             $table->timestamp('timestamp_last_login');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
