@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('Publisher');
             $table->string('SimultaneousSubmissionAllowed');
-            $table->string('Rating');
             $table->date('DeadlineDATE');
             $table->string('Contact');
             $table->string('Notes')->nullable();
@@ -28,6 +27,8 @@ return new class extends Migration
             $table->string('HowToSubmit')->nullable();
             $table->string('DeadlineInfo')->nullable();
             $table->json('Custom')->nullable();
+            $table->unsignedBigInteger('publisher_rating_id');
+            $table->foreign('publisher_rating_id')->references('id')->on('publisher_ratings');
             $table->unsignedBigInteger('publisher_deadline_id')->nullable();
             $table->foreign('publisher_deadline_id')->references('id')->on('publisher_deadline');
             $table->unsignedBigInteger('publisher_type_id')->nullable();

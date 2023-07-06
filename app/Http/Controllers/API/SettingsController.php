@@ -8,6 +8,7 @@ use App\Models\StoryType;
 use App\Models\StoryCompletionStatus;
 use App\Models\PublisherType;
 use App\Models\SubmissionStatus;
+use App\Models\Color;
 
 class SettingsController extends Controller
 {
@@ -80,5 +81,18 @@ class SettingsController extends Controller
         }
 
         return 'successfully deleted';
+    }
+
+    public function addColors(Request $request){
+        if (Color::where('rrggbb_tag', '=', $request->input('rrggbb_tag'))->exists()) {
+            return redirect()->back()->with('color_exists', 'Sorry! color with the provided name already exists!');
+        } else {
+            $color = new Color();
+            $color->rrggbb_tag = $request->input('rrggbb_tag');
+            $color->color_name = $request->input('color_name');
+            $color->save();
+
+            return redirect()->back()->with('color_added', 'New color has been added!');
+        }
     }
 }

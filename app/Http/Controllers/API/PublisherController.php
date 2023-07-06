@@ -29,7 +29,7 @@ class PublisherController extends Controller
             $publisher->Publisher = $request->input('publisher');
             $publisher->publisher_type_id = $request->input('type');
             $publisher->SimultaneousSubmissionAllowed = $request->input('simultaneoussubmission');
-            $publisher->Rating = $request->input('rank');
+            $publisher->publisher_rating_id = $request->input('rank');
             $publisher->DeadlineDATE = $request->input('deadline');
             $publisher->Contact = $request->input('contact');
             $publisher->save();

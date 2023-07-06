@@ -51,4 +51,5 @@ Route::prefix('settings')->group(function () {
 	Route::post('addField', 'App\Http\Controllers\API\SettingsController@add')->name('settings.addField');
 	Route::post('getFieldData', 'App\Http\Controllers\API\SettingsController@getFieldData')->name('settings.getFieldData');
 	Route::post('deleteFieldData', 'App\Http\Controllers\API\SettingsController@deleteFieldData')->name('settings.deleteFieldData');
+	Route::post('addColors', 'App\Http\Controllers\API\SettingsController@addColors')->name('settings.addColors');
 });

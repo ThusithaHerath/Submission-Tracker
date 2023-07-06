@@ -81,8 +81,44 @@
                                                             <input type="text" name="publisher_rating_rank"
                                                                 class="form-control" id="Story">
                                                         </div>
+                                                        @if (Auth::check())
                                                         <input type="number" name="user" value="{{Auth::User()->id}}"
                                                         hidden>
+                                                        @endif
+                                                        <div class="mt-2 text-center w-25"><button class="mt-4 w-100"
+                                                                type="submit">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <div class="section-title mb-4 mt-4 p-0 mt-1">
+                                        <h2>Add New Colours</h2>
+                                    </div>
+                                    <div class="testimonial-item p-4 rounded-3" style="background-color: #26231d">
+
+                                        <section id="book-a-table" class="book-a-table p-0">
+                                            <div class="container" data-aos="fade-up">
+                                                <form action="{{ url('http://127.0.0.1:8000/api/settings/addColors') }}"
+                                                    method="POST" enctype="multipart/form-data" role="form"
+                                                    data-aos="fade-up" data-aos-delay="100" class="php-email-form">
+                                                    @csrf
+                                                    <div class="d-flex">
+                                                        <div class="form-group me-3 p-0">
+                                                            <label for="" class="form-label">Publisher Rating</label>
+                                                            <input type="text" name="rrggbb_tag"
+                                                                class="form-control" >
+                                                        </div>
+                                                        <div class="form-group me-3 p-0">
+                                                            <label for="" class="form-label">Publisher Rating Rank</label>
+                                                            <input type="text" name="color_name"
+                                                                class="form-control">
+                                                        </div>
                                                         <div class="mt-2 text-center w-25"><button class="mt-4 w-100"
                                                                 type="submit">Save</button>
                                                         </div>

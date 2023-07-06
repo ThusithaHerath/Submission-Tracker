@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('login_history', function (Blueprint $table) {
+        Schema::create('user_setting', function (Blueprint $table) {
             $table->id();
-            $table->date('MostRecentLoginDate');
-            $table->integer('NumberOfDaysLoggedIn');
-            $table->integer('NumberOfTimesLoggedIn');
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('UserSettingValue_Value');
+            $table->string('UserFlexibleSetting_ID');
+            $table->string('UserFlexibleSetting_Name');
+            $table->string('UserFlexibleSetting_DefaultValue');
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('login_histories');
+        Schema::dropIfExists('user_setting');
     }
 };

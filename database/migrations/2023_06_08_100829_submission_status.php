@@ -15,7 +15,7 @@ return new class extends Migration {
         Schema::create('submission_status', function (Blueprint $table) {
             $table->id();
             $table->string('SubmissionStatus_Name');
-            $table->string('SubmissionStatusLocksStory')->nullable();
+            $table->binary('SubmissionStatusLocksStory')->nullable();
             $table->timestamps();
         });
 

@@ -18,9 +18,6 @@ return new class extends Migration
             $table->string('PublisherDeadlineWarning_Color');
             $table->string('PublisherDeadlineWarning_Message');
             $table->integer('DaysTilDealineLessThan');
-            $table->string('PublisherFollowupWarning_Color');
-            $table->string('PublisherFollowupWarning_Message');
-            $table->integer('DaysTilFollowupLessThan');
             $table->timestamps();
         });
     }

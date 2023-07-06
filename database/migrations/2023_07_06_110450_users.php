@@ -33,7 +33,7 @@ return new class extends Migration
             $table->unsignedBigInteger('license_id')->nullable();
             $table->foreign('license_id')->references('id')->on('license_type');
             $table->unsignedBigInteger('setting')->nullable();
-            $table->foreign('setting')->references('id')->on('user__setting');
+            $table->foreign('setting')->references('id')->on('user_setting');
             $table->rememberToken();
             $table->timestamps();
         });
