@@ -10,11 +10,8 @@ class PublisherDeadline extends Model
     use HasFactory;
 
     protected $fillable = [
-        'PublisherDeadlineWarning_Color',
-        'PublisherDeadlineWarning_Message',
+        'PublisherDeadlineWarningColor',
+        'PublisherDeadlineWarningMessage',
         'DaysTilDealineLessThan',
-        'PublisherFollowupWarning_Color',
-        'PublisherFollowupWarning_Message',
-        'DaysTilFollowupLessThan'
     ];
 }

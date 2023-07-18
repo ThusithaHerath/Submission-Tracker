@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_setting', function (Blueprint $table) {
+        Schema::create('story_completion_status_defaults', function (Blueprint $table) {
             $table->id();
-            $table->string('UserSettingValue_Value');
-            $table->string('UserFlexibleSetting_ID');
-            $table->string('UserFlexibleSetting_Name');
-            $table->string('UserFlexibleSetting_DefaultValue');
+            $table->string('StoryCompletionStatusName');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_setting');
+        Schema::dropIfExists('story_completion_status_defaults');
     }
 };

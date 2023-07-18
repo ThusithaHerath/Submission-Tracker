@@ -78,7 +78,7 @@
                                             hidden>
                                     </td>
                                     <td class="data-publisher">{{ $publisher->Publisher }}</td>
-                                    <td class="data-type">{{ $publisher->publisherType->PublisherType_Name }}</td>
+                                    <td class="data-type">{{ $publisher->publisherType->PublisherTypeName }}</td>
                                     <td class="data-submission">
                                         @if ($publisher->SimultaneousSubmissionAllowed == '1')
                                             Yes
@@ -87,7 +87,7 @@
                                         @endif
                                     </td>
                                     <td class="data-rank">{{ $publisher->Rating }}</td>
-                                    <td class="data-deadline">{{ $publisher->DeadlineDATE }}</td>
+                                    <td class="data-deadline">{{ $publisher->DeadlineDate }}</td>
                                     <td class="data-contact">{{ $publisher->Contact }}</td>
                                     <td class="data-notes">{{ $publisher->Notes }}</td>
                                     <td class="data-totSubmission">N/A</td>

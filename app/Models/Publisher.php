@@ -13,24 +13,24 @@ class Publisher extends Model
 
     protected $table = 'publisher';
     protected $fillable = [
-        'Publisher URL',
+        'PublisherURL',
         'FeeForSubmission',
         'HowToSubmit',
         'Rating',
         'SimultaneousSubmissionAllowed',
         'Contact',
-        'Deadline DATE',
+        'DeadlineDate',
         'DeadlineInfo',
         'Custom',
-        'publisher_deadline_id',
-        'publisher_type_id'
+        'publisherDeadlineId',
+        'publisherTypeId'
     ];
 
     public function publisherdeadline(){
-        return $this->belongsTo(license_type::class,'publisher_deadline_id');
+        return $this->belongsTo(license_type::class,'publisherDeadlineId');
     }
 
     public function publisherType(){
-        return $this->belongsTo(PublisherType::class,'publisher_type_id');
+        return $this->belongsTo(PublisherType::class,'publisherTypeId');
     }
 }

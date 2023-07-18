@@ -12,11 +12,19 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('story_type', function (Blueprint $table) {
+        Schema::create('submission_method', function (Blueprint $table) {
             $table->id();
-            $table->string('StoryType_Name');
+            $table->enum('SubmissionMethodName', [
+                'PublisherWebsite',
+                'Submissions.com',
+                'Email',
+                'Mail',
+                'Fax',
+            ])->default('mail')->nullable();
+            $table->integer('SubmissionMethodUserId')->index()->unsigned();
             $table->timestamps();
         });
+
     }
 
     /**
@@ -26,6 +34,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('story_type');
+        Schema::dropIfExists('submission_method');
     }
 };

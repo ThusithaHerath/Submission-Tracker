@@ -12,15 +12,12 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('story_version_ofAnother_story', function (Blueprint $table) {
+        Schema::create('story_completion_status', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Story_ID_Child')->nullable();
-            $table->foreign('Story_ID_Child')->references('id')->on('story');
-            $table->unsignedBigInteger('Story_ID_Parent')->nullable();
-            $table->foreign('Story_ID_Parent')->references('id')->on('story');
+            $table->string('StoryCompletionStatusName');
+            $table->integer('StoryCompletionStatusUserId')->index()->unsigned();
             $table->timestamps();
         });
-
     }
 
     /**
@@ -30,6 +27,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('story_version_ofAnother_story');
+        Schema::dropIfExists('story_completion_status');
     }
 };

@@ -13,9 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('publisher_type', function (Blueprint $table) {
+        Schema::create('user_setting', function (Blueprint $table) {
             $table->id();
-            $table->string('PublisherType_Name');
+            $table->string('UserSettingValueValue');
+            $table->string('UserFlexibleSettingID');
+            $table->string('UserFlexibleSettingName');
+            $table->string('UserFlexibleSettingDefaultValue');
+            $table->integer('UserSettingUserId')->index()->unsigned();
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publisher_types');
+        Schema::dropIfExists('user_setting');
     }
 };

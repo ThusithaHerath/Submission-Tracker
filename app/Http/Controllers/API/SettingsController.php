@@ -18,25 +18,25 @@ class SettingsController extends Controller
         if ($request->input('mfield') == '1') { //Story Status
 
             $storyStatus = new StoryCompletionStatus();
-            $storyStatus->StoryCompletionStatus_Name = $request->input('field_value');
+            $storyStatus->StoryCompletionStatusName = $request->input('field_value');
             $storyStatus->save();
             return back();
         } elseif ($request->input('mfield') == '2') { //Story type
 
             $storyType = new StoryType();
-            $storyType->StoryType_Name = $request->input('field_value');
+            $storyType->StoryTypeName = $request->input('field_value');
             $storyType->save();
             return back();
         } elseif ($request->input('mfield') == '3') { //Publisher type
 
             $publisherType = new PublisherType();
-            $publisherType->PublisherType_Name = $request->input('field_value');
+            $publisherType->PublisherTypeName = $request->input('field_value');
             $publisherType->save();
             return back();
         } elseif ($request->input('mfield') == '4') { //Submission status
 
             $submissionStatus = new SubmissionStatus();
-            $submissionStatus->SubmissionStatus_Name = $request->input('field_value');
+            $submissionStatus->SubmissionStatusName = $request->input('field_value');
             $submissionStatus->save();
             return back();
         }
@@ -84,12 +84,12 @@ class SettingsController extends Controller
     }
 
     public function addColors(Request $request){
-        if (Color::where('rrggbb_tag', '=', $request->input('rrggbb_tag'))->exists()) {
+        if (Color::where('RrggbbTag', '=', $request->input('rrggbb_tag'))->exists()) {
             return redirect()->back()->with('color_exists', 'Sorry! color with the provided name already exists!');
         } else {
             $color = new Color();
-            $color->rrggbb_tag = $request->input('rrggbb_tag');
-            $color->color_name = $request->input('color_name');
+            $color->RrggbbTag = $request->input('rrggbb_tag');
+            $color->ColorName = $request->input('color_name');
             $color->save();
 
             return redirect()->back()->with('color_added', 'New color has been added!');

@@ -27,10 +27,10 @@ class PublisherController extends Controller
 		}else{
             $publisher = new Publisher();
             $publisher->Publisher = $request->input('publisher');
-            $publisher->publisher_type_id = $request->input('type');
+            $publisher->publisherTypeId = $request->input('type');
             $publisher->SimultaneousSubmissionAllowed = $request->input('simultaneoussubmission');
-            $publisher->publisher_rating_id = $request->input('rank');
-            $publisher->DeadlineDATE = $request->input('deadline');
+            $publisher->publisherRatingId = $request->input('rank');
+            $publisher->DeadlineDate = $request->input('deadline');
             $publisher->Contact = $request->input('contact');
             $publisher->save();
 
@@ -45,9 +45,9 @@ class PublisherController extends Controller
         Publisher::where('id', $request->publisher_id)
             ->update([
                 'Publisher' => $request->publisher_name,
-                'publisher_type_id' => $request->publisher_type,
+                'publisherTypeId' => $request->publisher_type,
                 'SimultaneousSubmissionAllowed' => $request->publisher_submission,
-                'DeadlineDATE' => $request->publisher_deadline,
+                'DeadlineDate' => $request->publisher_deadline,
                 'Rating' => $request->publisher_rank,
                 'Contact' => $request->publisher_contact,
             ]);

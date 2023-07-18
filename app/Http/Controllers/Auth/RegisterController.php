@@ -75,7 +75,7 @@ class RegisterController extends Controller
             'city' => $data['city'],
             'state' => $data['state'],
             'zip' => $data['zip'],
-            'lisense_date' => $data['ldate'],
+            'lisenseDate' => $data['ldate'],
             'permission' => $data['permission'],
             'date_last_login' => Carbon::now(),
             'email' => $data['email'],

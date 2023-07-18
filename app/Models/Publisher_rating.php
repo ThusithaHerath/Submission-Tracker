@@ -9,7 +9,7 @@ class Publisher_rating extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'publisher_rating_name',
-        'publisher_rating_rank',
+        'publisherRatingName',
+        'publisherRatingRank',
     ];
 }

@@ -22,13 +22,13 @@ class StoryController extends Controller
     public function store(Request $request)
     {
 
-        if (Story::where('Story_Name', '=', $request->input('story'))->exists()) {
+        if (Story::where('StoryName', '=', $request->input('story'))->exists()) {
             return redirect()->back()->with('story_exists', 'Sorry! Story with the provided name already exists!');
         } else {
             $story = new Story();
-            $story->Story_Name = $request->input('story');
-            $story->StoryStatus_ID = $request->input('status');
-            $story->StoryType_ID = $request->input('type');
+            $story->StoryName = $request->input('story');
+            $story->StoryStatusID = $request->input('status');
+            $story->StoryTypeID = $request->input('type');
             $story->Lines = $request->input('lines');
             $story->Words = $request->input('words');
             $story->Summary = $request->input('summary');
@@ -45,12 +45,12 @@ class StoryController extends Controller
        
         Story::where('id', $request->story_id)
             ->update([
-                'Story_Name' => $request->editStory,
+                'StoryName' => $request->editStory,
                 'Lines' => $request->editLines,
                 'Words' => $request->editWords,
                 'Summary' => $request->summary,
-                'StoryStatus_ID' => $request->editStatus,
-                'StoryType_ID' => $request->editType,
+                'StoryStatusID' => $request->editStatus,
+                'StoryTypeID' => $request->editType,
             ]);
 
             return redirect()->back()->with('story_updated', 'Story has succefully updated!');

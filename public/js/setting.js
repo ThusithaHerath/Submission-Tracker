@@ -15,7 +15,7 @@ $(document).ready(function () {
                 '<li class="ui-state-default ui-sortable-handle d-flex"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span> <th scope="row"> <label class="control control--checkbox me-5"> <input type="checkbox" name="storyStatus" value="' +
                   obj.id +
                   '"/> <div class="control__indicator settingStatus"> </div> </label>  </th>' +
-                  obj.StoryCompletionStatus_Name +
+                  obj.StoryCompletionStatusName +
                   "</li>"
               );
             });
@@ -25,7 +25,7 @@ $(document).ready(function () {
                 '<li class="ui-state-default ui-sortable-handle d-flex"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span> <th scope="row"> <label class="control control--checkbox me-5"> <input type="checkbox" name="storyType" value="' +
                   obj.id +
                   '"/> <div class="control__indicator settingStatus"> </div> </label>  </th>' +
-                  obj.StoryType_Name +
+                  obj.StoryTypeName +
                   "</li>"
               );
             });
@@ -35,7 +35,7 @@ $(document).ready(function () {
                 '<li class="ui-state-default ui-sortable-handle d-flex"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span> <th scope="row"> <label class="control control--checkbox me-5"> <input type="checkbox" name="publisherType" value="' +
                   obj.id +
                   '"/> <div class="control__indicator settingStatus"> </div> </label>  </th>' +
-                  obj.PublisherType_Name +
+                  obj.PublisherTypeName +
                   "</li>"
               );
             });
@@ -45,7 +45,7 @@ $(document).ready(function () {
                 '<li class="ui-state-default ui-sortable-handle d-flex"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span> <th scope="row"> <label class="control control--checkbox me-5"> <input type="checkbox" name="submissionStatus" value="' +
                   obj.id +
                   '"/> <div class="control__indicator settingStatus"> </div> </label>  </th>' +
-                  obj.SubmissionStatus_Name +
+                  obj.SubmissionStatusName +
                   "</li>"
               );
             });

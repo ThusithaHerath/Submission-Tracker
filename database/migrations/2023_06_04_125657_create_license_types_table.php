@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('license_type', function (Blueprint $table) {
             $table->id();
-            $table->string('LicenseType_Name');
+            $table->string('LicenseTypeName');
             $table->integer('DaysDuration');
             $table->integer('DaysAfterExpirationToDeleteUser');
             $table->integer('MaxStories');
             $table->integer('MaxPublishers');
             $table->integer('MaxSubmissions');
-            $table->decimal('License_Price');
+            $table->decimal('LicensePrice');
             $table->timestamps();
         });
     }

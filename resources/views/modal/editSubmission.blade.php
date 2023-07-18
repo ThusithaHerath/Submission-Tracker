@@ -151,8 +151,8 @@
                                                                     <div class="control__indicator"></div>
                                                                 </label>
                                                             </th>
-                                                            <td>{{ $story->Story_Name }}</td>
-                                                            <td>{{ $story->StoryType_ID }}</td>
+                                                            <td>{{ $story->StoryName }}</td>
+                                                            <td>{{ $story->StoryTypeID }}</td>
                                                         </tr>
                                                     @endforeach
 
@@ -196,7 +196,7 @@
                                                                 </label>
                                                             </th>
                                                             <td>{{ $publisher->Publisher }}</td>
-                                                            <td>{{ $publisher->publisher_type_id }}</td>
+                                                            <td>{{ $publisher->publisherTypeId }}</td>
                                                             <td>{{ $publisher->SimultaneousSubmissionAllowed }}</td>
                                                             <td>{{ $publisher->Rating }}</td>
                                                         </tr>
@@ -220,8 +220,8 @@
                                                 style="width:150px!important;" id="data___status"
                                                 name="submission_status">
                                                 @foreach ($submission_status as $status)
-                                                    <option value="{{ $status->SubmissionStatus_ID }}">
-                                                        {{ $status->SubmissionStatus_Name }}</option>
+                                                    <option value="{{ $status->SubmissionStatusID }}">
+                                                        {{ $status->SubmissionStatusName }}</option>
                                                 @endforeach
                                             </select>
 

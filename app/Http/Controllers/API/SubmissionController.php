@@ -27,13 +27,13 @@ class SubmissionController extends Controller
     public function store(Request $request){
 
         $submission = new Submission();
-        $submission->SubmissionStatus_ID = $request->input('status');
-        $submission->user_ID = $request->input('user');
+        $submission->SubmissionStatusID = $request->input('status');
+        $submission->userID = $request->input('user');
         $submission->SubmissionDate = $request->input('submission');
         $submission->FeePaid = $request->input('pay');
         $submission->Notes = $request->input('note');
-        $submission->Story_ID = $request->input('story');
-        $submission->Publisher_ID = $request->input('publisher');
+        $submission->StoryID = $request->input('story');
+        $submission->PublisherID = $request->input('publisher');
         $submission->save();
         
         $story_id = $request->input('story');
@@ -42,7 +42,7 @@ class SubmissionController extends Controller
         $Publisher_status = Publisher::select('SimultaneousSubmissionAllowed')->where('id',$publisher_id)->first();
 
        
-        if($Publisher_status->SimultaneousSubmissionAllowed == '2' &&  $storyStatus->SubmissionStatusLocksStory == 'True'){
+        if($Publisher_status->SimultaneousSubmissionAllowed == '0' &&  $storyStatus->SubmissionStatusLocksStory == 'True'){
 
             Story::where('id', $story_id)
             ->update([
@@ -59,9 +59,9 @@ class SubmissionController extends Controller
     //    dd($request);
         Submission::where('id', $request->submission_id)
             ->update([
-                'Story_ID' => $request->story,
-                'Publisher_ID' => $request->publisher,
-                'SubmissionStatus_ID' => $request->submission_status,
+                'StoryID' => $request->story,
+                'PublisherID' => $request->publisher,
+                'SubmissionStatusID' => $request->submission_status,
                 'SubmissionDate' => $request->submission,
                 'FeePaid' => $request->pay,
                 'Notes' => $request->note,

@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('color', function (Blueprint $table) {
+        Schema::create('login_history', function (Blueprint $table) {
             $table->id();
-            $table->string('RrggbbTag');
-            $table->string('ColorName');
+            $table->date('MostRecentLoginDate');
+            $table->integer('NumberOfDaysLoggedIn');
+            $table->integer('NumberOfTimesLoggedIn');
+            $table->unsignedBigInteger('userID')->nullable();
+            $table->foreign('userID')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('color');
+        Schema::dropIfExists('login_history');
     }
 };

@@ -13,12 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('publisher_ratings', function (Blueprint $table) {
+        Schema::create('submission_method_defaults', function (Blueprint $table) {
             $table->id();
-            $table->string('publisher_rating_name');
-            $table->integer('publisher_rating_rank');
-            $table->unsignedBigInteger('user_ID')->nullable();
-            $table->foreign('user_ID')->references('id')->on('users');
+            $table->enum('SubmissionMethodName', [
+                'PublisherWebsite',
+                'Submissions.com',
+                'Email',
+                'Mail',
+                'Fax',
+            ])->default('mail')->nullable();
+            $table->integer('SubmissionMethodUserId')->unsigned()->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publisher_ratings');
+        Schema::dropIfExists('submission_method_defaults');
     }
 };

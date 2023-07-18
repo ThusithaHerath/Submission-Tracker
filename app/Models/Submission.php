@@ -20,32 +20,32 @@ class Submission extends Model
         'PayReceived',
         'Notes',
         'Custom',
-        'user_ID',
-        'Story_ID',
-        'Publisher_ID',
-        'SubmissionMethod_ID',
-        'SubmissionStatus_ID'
+        'userID',
+        'StoryID',
+        'PublisherID',
+        'SubmissionMethodID',
+        'SubmissionStatusID'
     ];
 
 
     public function user()
     {
-        return $this->belongsTo(User::class,'user_ID' );
+        return $this->belongsTo(User::class,'userID' );
     }
     public function story()
     {
-        return $this->belongsTo(Story::class,'Story_ID' );
+        return $this->belongsTo(Story::class,'StoryID' );
     }
     public function publisher()
     {
-        return $this->belongsTo(Publisher::class,'Publisher_ID' );
+        return $this->belongsTo(Publisher::class,'PublisherID' );
     }
     public function SubmissionMethod()
     {
-        return $this->belongsTo(SubmissionMethod::class,'SubmissionMethod_ID' );
+        return $this->belongsTo(SubmissionMethod::class,'SubmissionMethodID' );
     }
     public function SubmissionStatus()
     {
-        return $this->belongsTo(SubmissionStatus::class,'SubmissionStatus_ID' );
+        return $this->belongsTo(SubmissionStatus::class,'SubmissionStatusID' );
     }
 }

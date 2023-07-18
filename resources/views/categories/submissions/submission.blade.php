@@ -66,9 +66,9 @@
                                 </td>
                                 <td class="data-dateSubmit">{{$submission->SubmissionDate}}</td>
                                 <td class="data-locked">N/A</td>
-                                <td class="data-story">{{$submission->story->Story_Name}}</td>
+                                <td class="data-story">{{$submission->story->StoryName}}</td>
                                 <td class="data-publisher">{{$submission->publisher->Publisher}}</td>
-                                <td class="data-status">{{$submission->SubmissionStatus->SubmissionStatus_Name}}</td>
+                                <td class="data-status">{{$submission->SubmissionStatus->SubmissionStatusName}}</td>
                                 <td class="data-notes">{{$submission->Notes}}</td>
                                 <td class="data-pay">{{$submission->FeePaid}}</td>
 

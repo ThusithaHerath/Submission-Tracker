@@ -24,13 +24,13 @@ class PublisherratingController extends Controller
      */
     public function create(Request $request)
     {
-        if (PublisherRating::where('publisher_rating_name', '=', $request->input('publisher_rating_name'))->exists()) {
+        if (PublisherRating::where('publisherRatingName', '=', $request->input('publisher_rating_name'))->exists()) {
             return redirect()->back()->with('rating_exists', 'Sorry! Rating with the provided name already exists!');
         } else {
             $rating = new PublisherRating();
-            $rating->publisher_rating_name = $request->input('publisher_rating_name');
-            $rating->publisher_rating_rank = $request->input('publisher_rating_rank');
-            $rating->user_ID = $request->input('user');
+            $rating->publisherRatingName = $request->input('publisher_rating_name');
+            $rating->publisherRatingRank = $request->input('publisher_rating_rank');
+            $rating->userID = $request->input('user');
             $rating->save();
 
             return redirect()->back()->with('rating_added', 'New rating has been added!');

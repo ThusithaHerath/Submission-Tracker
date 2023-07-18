@@ -49,8 +49,8 @@
                                                                     <div class="control__indicator"></div>
                                                                 </label>
                                                             </th>
-                                                            <td>{{ $story->Story_Name }}</td>
-                                                            <td>{{ $story->StoryType_ID }}</td>
+                                                            <td>{{ $story->StoryName }}</td>
+                                                            <td>{{ $story->StoryTypeID }}</td>
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
@@ -83,7 +83,7 @@
                                                                 </label>
                                                             </th>
                                                             <td>{{ $publisher->Publisher }}</td>
-                                                            <td>{{ $publisher->publisher_type_id }}</td>
+                                                            <td>{{ $publisher->publisherTypeId }}</td>
                                                             <td>{{ $publisher->SimultaneousSubmissionAllowed }}</td>
                                                             <td>{{ $publisher->Rating }}</td>
                                                         </tr>
@@ -105,7 +105,7 @@
                                                 style="width:150px!important;" name="status" required>
                                                 @foreach ($submission_status as $status)
                                                     <option value="{{ $status->id }}">
-                                                        {{ $status->SubmissionStatus_Name }}</option>
+                                                        {{ $status->SubmissionStatusName }}</option>
                                                 @endforeach
                                             </select>
 

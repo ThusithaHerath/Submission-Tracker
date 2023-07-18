@@ -15,6 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(PublisherRatingSeeder::class);
-       
+        $this->call(PublisherRatingDefaults::class);
+        $this->call(PublisherTypeDefaults::class);
+        $this->call(SubmissionStatusDefault::class);
+        $this->call(SubmissionMethodDefault::class);
+        $this->call(StoryTypeDefault::class);
+        $this->call(StoryCompletionStatusDefault::class);
     }
 }

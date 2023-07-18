@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('color', function (Blueprint $table) {
+        Schema::create('publisher_type_defaults', function (Blueprint $table) {
             $table->id();
-            $table->string('RrggbbTag');
-            $table->string('ColorName');
+            $table->string('PublisherTypeName');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('color');
+        Schema::dropIfExists('publisher_type_defaults');
     }
 };

@@ -14,22 +14,22 @@ class Story extends Model
     protected $table = 'story';
 
     protected $fillable = [
-        'Story_Name',
+        'StoryName',
         'Lines',
         'Words',
         'Summary',
-        'StoryStatus_ID',
-        'StoryType_ID'
+        'StoryStatusID',
+        'StoryTypeID'
     ];
 
 
     public function storyStatus()
     {
-        return $this->belongsTo(StoryCompletionStatus::class,'StoryStatus_ID' );
+        return $this->belongsTo(StoryCompletionStatus::class,'StoryStatusID' );
     }
 
     public function storyType()
     {
-        return $this->belongsTo(StoryType::class,'StoryType_ID');
+        return $this->belongsTo(StoryType::class,'StoryTypeID');
     }
 }

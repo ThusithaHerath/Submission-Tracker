@@ -28,17 +28,17 @@ class User extends Authenticatable
         'city',
         'state',
         'zip',
-        'lisense_date',
+        'lisenseDate',
         'permission',
         'date_last_login',
         'email',
         'password',
-        'license_id',
+        'licenseId',
         'setting_id'
     ];
 
     public function licenseType(){
-        return $this->belongsTo(license_type::class,'license_id');
+        return $this->belongsTo(license_type::class,'licenseId');
     }
 
     public function settingValue(){

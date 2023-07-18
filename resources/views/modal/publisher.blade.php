@@ -40,7 +40,7 @@
                                                                   <option value="N/A">N/A</option>
                                                                   @foreach ($type as $type)
                                                                       <option value="{{ $type->id }}">
-                                                                          {{ $type->PublisherType_Name }}</option>
+                                                                          {{ $type->PublisherTypeName }}</option>
                                                                   @endforeach
                                                               </select>
 
@@ -57,7 +57,7 @@
                                                                   style="width:150px!important;"
                                                                   name="simultaneoussubmission">
                                                                   <option value="1">Yes</option>
-                                                                  <option value="2">No</option>
+                                                                  <option value="0">No</option>
                                                               </select>
                                                           </div>
                                                           <div class="form-group col-3 mt-4">

@@ -14,10 +14,10 @@ class LoginHistory extends Model
         'MostRecentLoginDate',
         'NumberOfDaysLoggedIn',
         'NumberOfTimesLoggedIn',
-        'user_id'
+        'userID'
     ];
 
     public function userId(){
-        return $this->belongsTo(User::class,'user_id');
+        return $this->belongsTo(User::class,'userID');
     }
 }

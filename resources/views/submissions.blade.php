@@ -72,7 +72,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <td>{{ $i + 1 }}</td>
-                                                    <td>{{ $submission->story->Story_Name }}</td>
+                                                    <td>{{ $submission->story->StoryName }}</td>
                                                     <td>{{ $submission->story->Lines }}</td>
                                                     <td>{{ $submission->story->Words }}</td>
 

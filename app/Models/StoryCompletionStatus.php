@@ -10,6 +10,6 @@ class StoryCompletionStatus extends Model
     use HasFactory;
     protected $table = 'story_completion_status';
     protected $fillable = [
-        'StoryCompletionStatus_Name'
+        'StoryCompletionStatusName'
     ];
 }

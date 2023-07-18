@@ -13,10 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('color', function (Blueprint $table) {
+        Schema::create('publisher_ratings_defaults', function (Blueprint $table) {
             $table->id();
-            $table->string('RrggbbTag');
-            $table->string('ColorName');
+            $table->string('publisherRatingName');
+            $table->integer('publisherRatingRank');
+            $table->unsignedBigInteger('userID')->nullable();
+            $table->foreign('userID')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('color');
+        Schema::dropIfExists('publisher_ratings_defaults');
     }
 };

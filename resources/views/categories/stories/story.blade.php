@@ -72,9 +72,9 @@
                             </td>
 
                             <td class="data-2">N/A</td>
-                            <td class="data-story">{{ $story->Story_Name }}</td>
-                            <td class="data-3">{{$story->storyStatus->StoryCompletionStatus_Name}}</td>
-                            <td class="data-4">{{$story->storyType->StoryType_Name}}</td>
+                            <td class="data-story">{{ $story->StoryName }}</td>
+                            <td class="data-3">{{$story->storyStatus->StoryCompletionStatusName}}</td>
+                            <td class="data-4">{{$story->storyType->StoryTypeName}}</td>
                             <td class="data-lines">{{ $story->Lines }}</td>
                             <td class="data-words">{{ $story->Words }}</td>
                             <td class="data-summary">{{ $story->Summary }}</td>

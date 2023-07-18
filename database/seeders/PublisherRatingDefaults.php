@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Publisher_rating;
+use App\Models\publisher_ratings_default;
 
-class PublisherRatingSeeder extends Seeder
+class PublisherRatingDefaults extends Seeder
 {
     /**
      * Run the database seeds.
@@ -32,7 +32,7 @@ class PublisherRatingSeeder extends Seeder
         ];
 
         foreach ($ratings as $rating) {
-            Publisher_rating::create($rating);
+            publisher_ratings_default::create($rating);
         }
     }
 }

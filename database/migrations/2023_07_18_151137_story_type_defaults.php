@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('login_history', function (Blueprint $table) {
+        Schema::create('story_type_defaults', function (Blueprint $table) {
             $table->id();
-            $table->date('MostRecentLoginDate');
-            $table->integer('NumberOfDaysLoggedIn');
-            $table->integer('NumberOfTimesLoggedIn');
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('StoryTypeName');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('login_history');
+        Schema::dropIfExists('story_type_defaults');
     }
 };
